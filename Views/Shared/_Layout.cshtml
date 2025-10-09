@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - NombreProyecto</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+
+<body>
+    <header>
+         <nav class="navbar">
+            <div class="logo">
+                <img src="~/img/enerfit-logo.png" alt="Enerfit" />
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Comunidad</a></li>
+                <li><a href="#">Alimentación</a></li>
+                <li><a href="#">Entrenamiento</a></li>
+                <li><a href="#">HealthBot</a></li>
+                <li><a href="#">Progreso</a></li>
+            </ul>
+            <div class="user-icon">
+                <img src="~/img/user-icon.png" alt="Usuario" />
+            </div>
+        </nav>
+        <p>Linea</p>
+    </header>
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <footer>
+        <img src="" alt="Insta">
+        <img src="" alt="Facebook">
+        <img src="" alt="X">
+        <p>Tel: 11275467328</p>
+        <p>Email: enerfit@gmail.com</p>
+        <p>Copiyright © 2025 Enerfit</p>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>
