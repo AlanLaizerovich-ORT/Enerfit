@@ -1,0 +1,39 @@
+@{
+    ViewData["Title"] = "EjerciciosPorZonas";
+}
+
+<section>
+    <div>
+        <img src="" alt="">
+        <h3>Hombro</h3>
+        <button>Ver</button>
+    </div>
+      <div>
+        <img src="" alt="">
+        <h3>Pierna</h3>
+        <button>Ver</button>
+    </div>
+      <div>
+        <img src="" alt="">
+        <h3>Bicep</h3>
+        <button>Ver</button>
+    </div>
+      <div>
+        <img src="" alt="">
+        <h3>Tricep</h3>
+        <button>Ver</button>
+    </div>
+</section>
+
+<section>
+     <div>
+        <img src="" alt="">
+        <h3>Abdomen</h3>
+        <button>Ver</button>
+    </div>
+     <div>
+        <img src="" alt="">
+        <h3>Pecho</h3>
+        <button>Ver</button>
+    </div>
+</section>
