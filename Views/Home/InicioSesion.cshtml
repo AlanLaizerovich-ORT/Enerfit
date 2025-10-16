@@ -2,16 +2,18 @@
     ViewData["Title"] = "InicioSesion";
 }
 
-<div>
-    <img src="" alt="Logo Enerfit" />
+<div class="login-container">
+    <img src="/Imagenes/Logo.png" alt="Logo Enerfit" />
 
-    <form method="post">
+    <form asp-action="Login" method="post">
         <label for="nombreUsuario">Nombre de usuario:</label>
         <input type="text" id="nombreUsuario" name="nombreUsuario" />
 
         <label for="contrasenia">Contraseña:</label>
-        <input type="password" id="contraseña" name="contraseña" />
+        <input type="password" id="contrasenia" name="contrasenia" />
 
         <button type="submit">Ingresar</button>
     </form>
+
+    <p>¿No tienes cuenta? <a asp-action="Registro">Regístrate aquí</a></p>
 </div>

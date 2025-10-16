@@ -1,20 +1,54 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Enerfit_Proyecto.Models;
+using Enerfit.Models;
 
-namespace Enerfit_Proyecto.Controllers;
-
-public class HomeController : Controller
+namespace Enerfit.Controllers
 {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
+    public class HomeController : Controller
     {
-        _logger = logger;
-    }
+        // GET: Página de bienvenida
+        [HttpGet]
+        public IActionResult Index()
+        {
+            return View();
+        }
 
-    public IActionResult Index()
-    {
-        return View();
+        // GET: Login
+        [HttpGet]
+        public IActionResult InicioSesion()
+        {
+            return View();
+        }
+
+        // POST: Procesar login
+        [HttpPost]
+        public IActionResult InicioSesion(string nombreUsuario, string contrasenia)
+        {
+            bool usuarioValido = (nombreUsuario == "test" && contrasenia == "1234");
+
+            if (usuarioValido)
+            {
+                return RedirectToAction("Index"); // vuelve al home después del login
+            }
+            else
+            {
+                ViewBag.Error = "Usuario o contraseña incorrecta";
+                return View();
+            }
+        }
+
+        // GET: Registro
+        [HttpGet]
+        public IActionResult Register()
+        {
+            return View();
+        }
+
+        // POST: Procesar registro
+        [HttpPost]
+        public IActionResult Register(string nombreUsuario, string contrasenia, string nombre, string apellido, string email)
+        {
+            // Guardar en la base de datos si aplica
+            return RedirectToAction("InicioSesion");
+        }
     }
 }
