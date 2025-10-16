@@ -5,7 +5,8 @@
 <div class="login-container">
     <img src="/Imagenes/Logo.png" alt="Logo Enerfit" />
 
-    <form asp-action="Login" method="post">
+   <form asp-action="InicioSesion" method="post">
+
         <label for="nombreUsuario">Nombre de usuario:</label>
         <input type="text" id="nombreUsuario" name="nombreUsuario" />
 
@@ -15,5 +16,7 @@
         <button type="submit">Ingresar</button>
     </form>
 
-    <p>¿No tienes cuenta? <a asp-action="Registro">Regístrate aquí</a></p>
+<p>¿No tienes cuenta? <a href="/Home/IrARegistro">Regístrate aquí</a></p>
+
+
 </div>

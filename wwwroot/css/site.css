@@ -278,3 +278,170 @@ body {
 .login-container a:hover {
   text-decoration: underline;
 }
+/*Registro*/
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Para centrar verticalmente */
+}
+
+/* Caja del registro */
+.registro {
+  width: 350px;
+  padding: 5%;
+  border: 1px solid #FFA500; 
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  background-color: #fff;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 34%;
+}
+
+/* Logo */
+.registro img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+/* Labels */
+.registro label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Inputs */
+.registro input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #FFA500;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Botón */
+.registro button {
+  width: 100%;
+  padding: 10px;
+  background-color: #8BC34A; /* verde */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.registro button:hover {
+  background-color: #7CB342; /* verde más oscuro al pasar el mouse */
+}
+
+/* Texto de enlace */
+.registro p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.registro a {
+  color: #FFA500;
+  text-decoration: none;
+}
+
+.registro a:hover {
+  text-decoration: underline;
+}
+
+/*Alimentacion*/
+.cards-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.card {
+  background-color: #febc2f57;
+  border: 1px solid #39A45B;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 5%;
+  width: 220px;
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-top: 2%;
+  margin-bottom: 8%;
+  color: #000;
+}
+
+.card .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.card button {
+  padding: 8px 15px;
+  border: none;
+  background-color: #39A45B;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.card button:hover {
+  background-color: #e69500;
+}
+/*PlanPorobj*/
+section {
+  display: flex;
+  justify-content: center; 
+  gap: 30px;               
+  margin: 40px 0;
+  flex-wrap: wrap;         
+}
+
+section div {
+  background-color: #ffe9b8; 
+  border-radius: 10px 10px 10px 10px;       
+  padding: 7%;       
+  text-align: center;
+  width: 35%;               
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+
+section div img {
+  width: 60px;   
+  height: 60px;
+  object-fit: contain;
+}
+
+section div h5 {
+  font-size: 16px;
+  color: #006400;  
+  margin: 0;
+}
+

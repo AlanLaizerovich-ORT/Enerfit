@@ -25,7 +25,7 @@ namespace Enerfit.Controllers
         {
             bool usuarioValido = (nombreUsuario == "test" && contrasenia == "1234");
 
-            if (usuarioValido)
+            if (usuarioValido == true)
             {
                 return RedirectToAction("Index"); // vuelve al home después del login
             }
@@ -36,19 +36,36 @@ namespace Enerfit.Controllers
             }
         }
 
-        // GET: Registro
+        
+        public IActionResult IrARegistro()
+{
+    return RedirectToAction("Registro", "Home");
+}
+
         [HttpGet]
-        public IActionResult Register()
+        public IActionResult Registro()
         {
             return View();
         }
 
         // POST: Procesar registro
         [HttpPost]
-        public IActionResult Register(string nombreUsuario, string contrasenia, string nombre, string apellido, string email)
+        public IActionResult Registro(string nombreUsuario, string contrasenia, string nombre, string apellido, string email)
         {
             // Guardar en la base de datos si aplica
             return RedirectToAction("InicioSesion");
+        }
+         public IActionResult Alimentacion()
+        {
+            return View();
+        }
+         public IActionResult Entrenamiento()
+        {
+            return View();
+        }
+        public IActionResult PlanesPorObjetivo1()
+        {
+            return View();
         }
     }
 }
