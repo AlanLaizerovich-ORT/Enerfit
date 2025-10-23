@@ -55,3 +55,15 @@ C:\Users\49518922\Desktop\Aura\Enerfit\obj\Debug\net8.0\refint\Enerfit-Proyecto.
 C:\Users\49518922\Desktop\Aura\Enerfit\obj\Debug\net8.0\Enerfit-Proyecto.pdb
 C:\Users\49518922\Desktop\Aura\Enerfit\obj\Debug\net8.0\Enerfit-Proyecto.genruntimeconfig.cache
 C:\Users\49518922\Desktop\Aura\Enerfit\obj\Debug\net8.0\ref\Enerfit-Proyecto.dll
+C:\Users\49518922\Downloads\Aura\Enerfit\obj\Debug\net8.0\Enerfit-Proyecto.csproj.AssemblyReference.cache
+C:\Users\49518922\Downloads\Aura\Enerfit\obj\Debug\net8.0\Enerfit-Proyecto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\49518922\Downloads\Aura\Enerfit\obj\Debug\net8.0\Enerfit-Proyecto.AssemblyInfoInputs.cache
+C:\Users\49518922\Downloads\Aura\Enerfit\obj\Debug\net8.0\Enerfit-Proyecto.AssemblyInfo.cs
+C:\Users\49518922\Downloads\Aura\Enerfit\obj\Debug\net8.0\Enerfit-Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\49518922\Downloads\Aura\Enerfit\obj\Debug\net8.0\Enerfit-Proyecto.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\49518922\Downloads\Aura\Enerfit\obj\Debug\net8.0\Enerfit-Proyecto.RazorAssemblyInfo.cache
+C:\Users\49518922\Downloads\Aura\Enerfit\obj\Debug\net8.0\Enerfit-Proyecto.RazorAssemblyInfo.cs
+C:\Users\49518922\Downloads\Aura\Enerfit\obj\Debug\net8.0\Enerfit-Proyecto.sourcelink.json
+C:\Users\49518922\Downloads\Aura\Enerfit\obj\Debug\net8.0\Enerfit-Proyecto.dll
+C:\Users\49518922\Downloads\Aura\Enerfit\obj\Debug\net8.0\refint\Enerfit-Proyecto.dll
+C:\Users\49518922\Downloads\Aura\Enerfit\obj\Debug\net8.0\Enerfit-Proyecto.pdb
