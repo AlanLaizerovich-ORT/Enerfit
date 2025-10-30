@@ -1,6 +1,18 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\49552421\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\2309082.png",
+      "PackagePath": "staticwebassets\\Imagenes\\2309082.png"
+    },
+    {
+      "Id": "C:\\Users\\49552421\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\4760544-removebg-preview.png",
+      "PackagePath": "staticwebassets\\Imagenes\\4760544-removebg-preview.png"
+    },
+    {
+      "Id": "C:\\Users\\49552421\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\5850570-removebg-preview.png",
+      "PackagePath": "staticwebassets\\Imagenes\\5850570-removebg-preview.png"
+    },
+    {
       "Id": "C:\\Users\\49552421\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\Alimentacion.png",
       "PackagePath": "staticwebassets\\Imagenes\\Alimentacion.png"
     },
@@ -41,8 +53,16 @@
       "PackagePath": "staticwebassets\\Imagenes\\Logo.png"
     },
     {
+      "Id": "C:\\Users\\49552421\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\Pecho.png",
+      "PackagePath": "staticwebassets\\Imagenes\\Pecho.png"
+    },
+    {
       "Id": "C:\\Users\\49552421\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\Perfil.png",
       "PackagePath": "staticwebassets\\Imagenes\\Perfil.png"
+    },
+    {
+      "Id": "C:\\Users\\49552421\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\Pierna.png",
+      "PackagePath": "staticwebassets\\Imagenes\\Pierna.png"
     },
     {
       "Id": "C:\\Users\\49552421\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\Plan por obj.png",
@@ -71,6 +91,22 @@
     {
       "Id": "C:\\Users\\49552421\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\X.png",
       "PackagePath": "staticwebassets\\Imagenes\\X.png"
+    },
+    {
+      "Id": "C:\\Users\\49552421\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\abdomen.png",
+      "PackagePath": "staticwebassets\\Imagenes\\abdomen.png"
+    },
+    {
+      "Id": "C:\\Users\\49552421\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\bicep.png",
+      "PackagePath": "staticwebassets\\Imagenes\\bicep.png"
+    },
+    {
+      "Id": "C:\\Users\\49552421\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\hombro.png",
+      "PackagePath": "staticwebassets\\Imagenes\\hombro.png"
+    },
+    {
+      "Id": "C:\\Users\\49552421\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\tricep.png",
+      "PackagePath": "staticwebassets\\Imagenes\\tricep.png"
     },
     {
       "Id": "C:\\Users\\49552421\\Downloads\\1\\Enerfit\\wwwroot\\css\\site.css",

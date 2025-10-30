@@ -101,5 +101,13 @@ namespace Enerfit.Controllers
         {
             return View();
         }
+          public IActionResult RutinasPorZona()
+        {
+            return View();
+        }
+          public IActionResult Hombros()
+        {
+            return View();
+        }
     }
 }
