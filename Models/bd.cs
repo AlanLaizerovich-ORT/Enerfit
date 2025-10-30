@@ -35,6 +35,27 @@ namespace TP0_INTROBD
                 connection.Execute(query, new { pId = IDUsuario });
             }
         }
+        public static void AgregarPerfil(Perfil nuevoPerfil)
+        {
+         using (SqlConnection connection = new SqlConnection(_connectionString))
+    {
+        string query = @"
+            INSERT INTO Perfiles (Nombre, Apellido, Email, Sexo, IDPlanPorObj, IDPlanPerso, IDUsuario)
+            VALUES (@pNombre, @pApellido, @pEmail, @pSexo, @pIDPlanPorObj, @pIDPlanPerso, @pIDUsuario)";
+        
+        connection.Execute(query, new
+        {
+            pNombre = nuevoPerfil.Nombre,
+            pApellido = nuevoPerfil.Apellido,
+            pEmail = nuevoPerfil.Email,
+            pSexo = nuevoPerfil.Sexo,
+            pIDPlanPorObj = nuevoPerfil.IDPlanPorObj,
+            pIDPlanPerso = nuevoPerfil.IDPlanPerso,
+            pIDUsuario = nuevoPerfil.IDUsuario
+        });
+    }
+}
+
 
 
     

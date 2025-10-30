@@ -97,5 +97,9 @@ namespace Enerfit.Controllers
         {
             return View();
         }
+          public IActionResult Videos()
+        {
+            return View();
+        }
     }
 }
