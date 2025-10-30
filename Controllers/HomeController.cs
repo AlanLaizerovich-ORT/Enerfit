@@ -22,22 +22,24 @@ namespace Enerfit.Controllers
 
         // POST: Procesar login con BD (Dapper)
         [HttpPost]
-        public IActionResult InicioSesion(string nombreUsuario, string contrasenia)
+        public IActionResult IniciarSesion(string nombreUsuario, string contrasenia)
         {
-            var usuarioValido = BD.ObtenerUsuario(nombreUsuario, contrasenia);
+             Usuario usuario = BD.ObtenerUsuario(nombreUsuario, contrasenia);
 
-            if (usuarioValido != null)
-            {
-                // Guardamos el nombre en sesión si querés
-                HttpContext.Session.SetString("Usuario", usuarioValido.Nombre);
-                return RedirectToAction("Index");
-            }
-            else
-            {
-                ViewBag.Error = "Usuario o contraseña incorrecta";
-                return View();
-            }
+     if (usuario != null)
+         {
+        //  Usuario encontrado → iniciar sesión
+        HttpContext.Session.SetString("UsuarioNombre", usuario.Nombre);
+        return RedirectToAction("Index", "Home");
         }
+        else
+     {
+        //  Usuario no existe → mostrar error
+        ViewBag.Error = "Usuario o contraseña incorrectos.";
+        return View("Login");
+    }
+}
+
 
         public IActionResult IrARegistro()
         {
@@ -52,9 +54,9 @@ namespace Enerfit.Controllers
 
         // POST: Procesar registro con BD (Dapper)
         [HttpPost]
-        public IActionResult Registro(string nombreUsuario, string contrasenia, string nombre, string apellido, string email, string sexo)
+        public IActionResult Registro(string nombreUsuario, string contrasenia, string nombre, string apellido, string email, string sexo, int IDPlanPorObj, int IDPlanPerso, int IDUsuario)
         {
-            var nuevoUsuario = new Usuarios
+            var nuevoUsuario = new Usuario
             {
                 Nombre = nombreUsuario,
                 Contrasenia = contrasenia
@@ -70,7 +72,10 @@ namespace Enerfit.Controllers
                 Apellido = apellido,
                 Email = email,
                 Sexo = sexo,
-                IdUsuario = nuevoUsuario.IdUsuario
+                IDPlanPorObj = IDPlanPorObj,
+                IDPlanPerso = IDPlanPerso,
+                IDUsuario = nuevoUsuario.IdUsuario
+           
             };
 
             BD.AgregarPerfil(nuevoPerfil);

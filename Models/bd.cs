@@ -8,7 +8,7 @@ namespace TP0_INTROBD
     {
         private static string _connectionString = @"Server=localhost;DataBase=EnerfitDB;Integrated Security=True;TrustServerCertificate=True;";
 
-        // ✅ Verifica si el usuario existe en la BD
+        // Verifica si el usuario existe en la BD
         public static Usuario ObtenerUsuario(string nombreUsuario, string contrasenia)
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
@@ -18,15 +18,24 @@ namespace TP0_INTROBD
             }
         }
 
-        // ✅ Guarda un nuevo usuario
+        // Guarda un nuevo usuario
         public static void AgregarUsuario(Usuario nuevoUsuario)
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 string query = "INSERT INTO Usuarios (Nombre, Contrasenia) VALUES (@pNombre, @pContrasenia)";
-                connection.Execute(query, new { pNombre = nuevoUsuario.NombreUsuario, pContrasenia = nuevoUsuario.Contrasenia });
+                connection.Execute(query, new { pNombre = nuevoUsuario.Nombre, pContrasenia = nuevoUsuario.Contrasenia });
             }
         }
+        public static void EliminarUsuario(int IDUsuario)
+        {
+             using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                 string query = "DELETE FROM Usuarios WHERE IdUsuario = @pId";
+                connection.Execute(query, new { pId = IDUsuario });
+            }
+        }
+
 
     
        
