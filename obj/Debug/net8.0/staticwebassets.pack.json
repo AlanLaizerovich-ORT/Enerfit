@@ -17,6 +17,14 @@
       "PackagePath": "staticwebassets\\Imagenes\\Alimentacion.png"
     },
     {
+      "Id": "C:\\Users\\48801549\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\CrunchMaquina.gif",
+      "PackagePath": "staticwebassets\\Imagenes\\CrunchMaquina.gif"
+    },
+    {
+      "Id": "C:\\Users\\48801549\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\CrunchSuperior.gif",
+      "PackagePath": "staticwebassets\\Imagenes\\CrunchSuperior.gif"
+    },
+    {
       "Id": "C:\\Users\\48801549\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\CurlBicep.gif",
       "PackagePath": "staticwebassets\\Imagenes\\CurlBicep.gif"
     },
@@ -45,8 +53,16 @@
       "PackagePath": "staticwebassets\\Imagenes\\ExtensionDeCuadriceps.gif"
     },
     {
+      "Id": "C:\\Users\\48801549\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\ExtensionTricepPolea.gif",
+      "PackagePath": "staticwebassets\\Imagenes\\ExtensionTricepPolea.gif"
+    },
+    {
       "Id": "C:\\Users\\48801549\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\Face.jfif",
       "PackagePath": "staticwebassets\\Imagenes\\Face.jfif"
+    },
+    {
+      "Id": "C:\\Users\\48801549\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\Flexiones.gif",
+      "PackagePath": "staticwebassets\\Imagenes\\Flexiones.gif"
     },
     {
       "Id": "C:\\Users\\48801549\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\Guardados.png",
@@ -89,12 +105,28 @@
       "PackagePath": "staticwebassets\\Imagenes\\Plan por obj.png"
     },
     {
+      "Id": "C:\\Users\\48801549\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\Plancha.gif",
+      "PackagePath": "staticwebassets\\Imagenes\\Plancha.gif"
+    },
+    {
+      "Id": "C:\\Users\\48801549\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\PressFrances.gif",
+      "PackagePath": "staticwebassets\\Imagenes\\PressFrances.gif"
+    },
+    {
+      "Id": "C:\\Users\\48801549\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\Pressbanca.jfif",
+      "PackagePath": "staticwebassets\\Imagenes\\Pressbanca.jfif"
+    },
+    {
       "Id": "C:\\Users\\48801549\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\Pressmilitar.gif",
       "PackagePath": "staticwebassets\\Imagenes\\Pressmilitar.gif"
     },
     {
       "Id": "C:\\Users\\48801549\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\Pressmilitar.jfif",
       "PackagePath": "staticwebassets\\Imagenes\\Pressmilitar.jfif"
+    },
+    {
+      "Id": "C:\\Users\\48801549\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\Pullover.gif",
+      "PackagePath": "staticwebassets\\Imagenes\\Pullover.gif"
     },
     {
       "Id": "C:\\Users\\48801549\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\Recetas.png",
@@ -139,6 +171,10 @@
     {
       "Id": "C:\\Users\\48801549\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\bicep.png",
       "PackagePath": "staticwebassets\\Imagenes\\bicep.png"
+    },
+    {
+      "Id": "C:\\Users\\48801549\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\extensionesDepie.gif",
+      "PackagePath": "staticwebassets\\Imagenes\\extensionesDepie.gif"
     },
     {
       "Id": "C:\\Users\\48801549\\Downloads\\1\\Enerfit\\wwwroot\\Imagenes\\hombro.png",

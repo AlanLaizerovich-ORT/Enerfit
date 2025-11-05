@@ -121,5 +121,23 @@ namespace Enerfit.Controllers
         {
             return View();
         }
+        public IActionResult Abdomen()
+        {
+            return View();
+        }
+        public IActionResult Pecho()
+        {
+            return View();
+        }
+        public IActionResult Volumen()
+        {
+            return View();
+        }
+        public IActionResult Deficit()
+        {
+            return View();
+        }
+        
     }
+
 }
