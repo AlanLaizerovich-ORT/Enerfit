@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Enerfit.Models;
-using TP0_INTROBD; // 👈 para usar la clase BD
+using Enerfit; // 👈 para usar la clase BD
 
 namespace Enerfit.Controllers
 {
@@ -106,6 +106,18 @@ namespace Enerfit.Controllers
             return View();
         }
           public IActionResult Hombros()
+        {
+            return View();
+        }
+           public IActionResult Piernas()
+        {
+            return View();
+        }
+          public IActionResult Bicep()
+        {
+            return View();
+        }
+        public IActionResult Tricep()
         {
             return View();
         }

@@ -2,7 +2,7 @@ using Microsoft.Data.SqlClient;
 using Dapper;
 using Enerfit.Models;
 
-namespace TP0_INTROBD
+namespace Enerfit
 {
     public class BD
     {
