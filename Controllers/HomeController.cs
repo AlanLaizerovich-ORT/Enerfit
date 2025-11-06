@@ -79,5 +79,8 @@ namespace Enerfit.Controllers
         public IActionResult Pecho() => View();
         public IActionResult Volumen() => View();
         public IActionResult Deficit() => View();
+        public IActionResult Progreso() => View();
+        public IActionResult Comunidad() => View();
+         public IActionResult HealthBot() => View();
     }
 }

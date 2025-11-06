@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Enerfit-Proyecto")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3af7b376780c7fb23f33fc3aae8b4f6b67ac4458")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e7738937c254c53af63bae5666cdc08bf4935e17")]
 [assembly: System.Reflection.AssemblyProductAttribute("Enerfit-Proyecto")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Enerfit-Proyecto")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

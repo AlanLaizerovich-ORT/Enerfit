@@ -469,9 +469,9 @@ section div h5 {
 }
 
 .card h2 {
-  color: #f7931e;
-  font-weight: bold;
-  margin-bottom: 15px;
+  color: black;
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
 .card button {
@@ -540,7 +540,7 @@ section div h5 {
 }
 .musculos-section {
   text-align: center;
-  padding: 40px 20px;
+  padding: 60px 0;
   background-color: #fff;
 }
 
@@ -554,11 +554,13 @@ h2 {
 
 .musculos-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); 
-  gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 60px; 
   justify-content: center;
+  align-items: center;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0 auto; 
+  padding: 20px;
   background-color: transparent;
 }
 
@@ -571,19 +573,17 @@ h2 {
 .musculo-card {
   background-color: #ffeecb;
   border: 2px solid #a5d6a7;
-  border-radius: 30px;
-  width: 180px;
-  height: 180px;
+  border-radius: 25px;
+  width: 220px;
+  height: 220px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  margin: 0 auto;
 }
-
 .musculo-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
