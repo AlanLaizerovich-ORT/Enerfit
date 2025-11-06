@@ -1,27 +1,90 @@
-@{
-    ViewData["Title"] = "Healthbot";
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthBot - Enerfit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chatbot-wrapper">
+        <div class="chatbot-container">
+            <header>
+                <h2>🤖 HealthBot <span>Enerfit</span></h2>
+            </header>
+
+            <div id="chat-box" class="chat-box">
+                <div class="message bot-message">
+                    <div class="avatar bot-avatar">🤖</div>
+                    <div class="bubble">¡Hola! Soy tu asistente Enerfit. ¿Cómo puedo ayudarte hoy?</div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="userMessage" placeholder="Escribí tu mensaje...">
+                <button id="sendBtn">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $("#sendBtn").click(function () {
+            sendMessage();
+        });
+
+        $("#userMessage").keypress(function (e) {
+            if (e.which === 13) sendMessage();
+        });
+
+        function sendMessage() {
+    var userMessage = $("#userMessage").val().trim();
+    if (userMessage === "") return;
+
+    // Mostrar mensaje del usuario
+    $("#chat-box").append(`
+        <div class="message user-message">
+            <div class="bubble">${userMessage}</div>
+            <div class="avatar user-avatar">🧍‍♂️</div>
+        </div>
+    `);
+    $("#userMessage").val("");
+    $("#chat-box").scrollTop($("#chat-box")[0].scrollHeight);
+
+    // ✅ Llamada AJAX al controlador
+    $.ajax({
+        type: "POST",
+        url: "/Home/GetResponse",
+        data: { userMessage: userMessage },
+        success: function (data) {
+            // Mostrar respuesta del bot
+            $("#chat-box").append(`
+                <div class="message bot-message">
+                    <div class="avatar bot-avatar">🤖</div>
+                    <div class="bubble">${data.reply}</div>
+                </div>
+            `);
+
+            // ✅ Si el bot pide redirigir, lo hace luego de 2 segundos
+            if (data.redirect) {
+                setTimeout(() => {
+                    window.location.href = data.redirect;
+                }, 2000);
+            }
+
+            $("#chat-box").scrollTop($("#chat-box")[0].scrollHeight);
+        },
+        error: function () {
+            $("#chat-box").append(`
+                <div class="message bot-message">
+                    <div class="avatar bot-avatar">🤖</div>
+                    <div class="bubble">⚠️ Ocurrió un error al procesar tu mensaje.</div>
+                </div>
+            `);
+        }
+    });
 }
 
-<section class="cards-section">
-    </div>
-    <div class="Food">
-    <div class="card">
- <img src="/Imagenes/Logo.png" alt="">
-        <h3>Food</h3>
-         <div class="buttons">
-            <button>Entrar</button>
-        </div>
-    </div>
-       
-    </div>
-    <div class="Train">
-        <div class="card">
- <img src="/Imagenes/Logo.png" alt="">
-        <h3>Train</h3>
-        <div class="buttons">
-            <button>Entrar</button>
-        </div>
-        </div>
-       
-    </div>
-</section>
+    </script>
+</body>
+</html>
