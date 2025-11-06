@@ -5,7 +5,7 @@
 <div class="login-container">
     <img src="/Imagenes/Logo.png" alt="Logo Enerfit" />
 
-   <form asp-action="InicioSesion" method="post">
+ <form asp-controller="Home" asp-action="IniciarSesion" method="post">
 
         <label for="nombreUsuario">Nombre de usuario:</label>
         <input type="text" id="nombreUsuario" name="nombreUsuario" />

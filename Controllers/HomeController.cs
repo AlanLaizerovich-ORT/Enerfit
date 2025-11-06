@@ -1,60 +1,46 @@
 using Microsoft.AspNetCore.Mvc;
 using Enerfit.Models;
-using Enerfit; // 👈 para usar la clase BD
+using Enerfit; 
 
 namespace Enerfit.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: Página de bienvenida
         [HttpGet]
-        public IActionResult Index()
-        {
-            return View();
-        }
+        public IActionResult Index() => View();
 
-        // GET: Login
         [HttpGet]
-        public IActionResult InicioSesion()
-        {
-            return View();
-        }
+        public IActionResult InicioSesion() => View();
 
-        // POST: Procesar login con BD (Dapper)
         [HttpPost]
         public IActionResult IniciarSesion(string nombreUsuario, string contrasenia)
         {
-             Usuario usuario = BD.ObtenerUsuario(nombreUsuario, contrasenia);
+            Usuario usuario = BD.ObtenerUsuario(nombreUsuario, contrasenia);
 
-     if (usuario != null)
-         {
-        //  Usuario encontrado → iniciar sesión
-        HttpContext.Session.SetString("UsuarioNombre", usuario.Nombre);
-        return RedirectToAction("Index", "Home");
+            if (usuario != null)
+            {
+                HttpContext.Session.SetString("UsuarioNombre", usuario.Nombre);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                ViewBag.Error = "Usuario o contraseña incorrectos.";
+                return View("InicioSesion");
+            }
         }
-        else
-     {
-        //  Usuario no existe → mostrar error
-        ViewBag.Error = "Usuario o contraseña incorrectos.";
-        return View("Login");
-    }
-}
-
-
         public IActionResult IrARegistro()
-        {
-            return RedirectToAction("Registro", "Home");
-        }
+{
+    return RedirectToAction("Registro");
+}
+        
 
+        // ✅ GET Registro
         [HttpGet]
-        public IActionResult Registro()
-        {
-            return View();
-        }
+        public IActionResult Registro() => View();
 
-        // POST: Procesar registro con BD (Dapper)
+        // ✅ POST Registro — (nombre igual que el del formulario)
         [HttpPost]
-        public IActionResult Registro(string nombreUsuario, string contrasenia, string nombre, string apellido, string email, string sexo, int IDPlanPorObj, int IDPlanPerso, int IDUsuario)
+        public IActionResult Registro(string nombreUsuario, string contrasenia, string nombre, string apellido, string email, string sexo)
         {
             var nuevoUsuario = new Usuario
             {
@@ -62,82 +48,36 @@ namespace Enerfit.Controllers
                 Contrasenia = contrasenia
             };
 
-            // Guardar usuario
-            BD.AgregarUsuario(nuevoUsuario);
+            // 🔹 Insertar usuario y obtener su Id autogenerado
+            int nuevoId = BD.AgregarUsuario(nuevoUsuario);
 
-            // Crear perfil (podés ajustarlo si tu BD asigna IdUsuario automáticamente)
             var nuevoPerfil = new Perfil
             {
                 Nombre = nombre,
                 Apellido = apellido,
                 Email = email,
                 Sexo = sexo,
-                IDPlanPorObj = IDPlanPorObj,
-                IDPlanPerso = IDPlanPerso,
-                IDUsuario = nuevoUsuario.IdUsuario
-           
+                IDUsuario = nuevoId
             };
 
             BD.AgregarPerfil(nuevoPerfil);
 
             return RedirectToAction("InicioSesion");
         }
-
-        public IActionResult Alimentacion()
-        {
-            return View();
-        }
-
-        public IActionResult Entrenamiento()
-        {
-            return View();
-        }
-
-        public IActionResult PlanesPorObjetivo1()
-        {
-            return View();
-        }
-          public IActionResult Videos()
-        {
-            return View();
-        }
-          public IActionResult RutinasPorZona()
-        {
-            return View();
-        }
-          public IActionResult Hombros()
-        {
-            return View();
-        }
-           public IActionResult Piernas()
-        {
-            return View();
-        }
-          public IActionResult Bicep()
-        {
-            return View();
-        }
-        public IActionResult Tricep()
-        {
-            return View();
-        }
-        public IActionResult Abdomen()
-        {
-            return View();
-        }
-        public IActionResult Pecho()
-        {
-            return View();
-        }
-        public IActionResult Volumen()
-        {
-            return View();
-        }
-        public IActionResult Deficit()
-        {
-            return View();
-        }
         
-    }
 
+        public IActionResult Alimentacion() => View();
+        public IActionResult Entrenamiento() => View();
+        public IActionResult PlanesPorObjetivo1() => View();
+        public IActionResult Videos() => View();
+        public IActionResult RutinasPorZona() => View();
+        public IActionResult Hombros() => View();
+        public IActionResult Piernas() => View();
+        public IActionResult Bicep() => View();
+        public IActionResult Tricep() => View();
+        public IActionResult Abdomen() => View();
+        public IActionResult Pecho() => View();
+        public IActionResult Volumen() => View();
+        public IActionResult Deficit() => View();
+    }
 }
