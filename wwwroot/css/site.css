@@ -618,16 +618,20 @@ h2 {
 .btn-ver:hover {
   background-color: #388e3c;
 }
+/* --- CONTENEDOR PRINCIPAL --- */
 .chatbot-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
+  min-height: calc(100vh - 200px); /* deja espacio para el footer */
+  padding: 30px 0;
+  box-sizing: border-box;
 }
 
 .chatbot-container {
   width: 100%;
-  max-width: 600px;
+  max-width: 1200px; /* más ancho que antes */
   background: #ffffff;
   border-radius: 20px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
@@ -635,13 +639,14 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  margin-bottom: 80px; /* espacio para el footer */
 }
-
-
 
 /* --- Caja de chat --- */
 .chat-box {
-  height: 320px;
+  flex: 1;
+  height: 100%;
+  min-height: 500px;
   overflow-y: auto;
   background: #fafafa;
   border-radius: 15px;
@@ -707,6 +712,7 @@ h2 {
 .input-area {
   display: flex;
   gap: 10px;
+  margin-top: 15px;
 }
 
 .input-area input {
@@ -738,7 +744,7 @@ h2 {
   background: #ff8533;
 }
 
-/* --- Animación de entrada --- */
+/* --- Animación --- */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(5px); }
   to { opacity: 1; transform: translateY(0); }
@@ -752,4 +758,5 @@ h2 {
   background-color: #ff914d;
   border-radius: 3px;
 }
+
 

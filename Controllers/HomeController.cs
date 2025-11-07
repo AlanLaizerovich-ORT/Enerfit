@@ -7,10 +7,9 @@ namespace Enerfit.Controllers
 {
     public class HomeController : Controller
     {
-        // ===== VISTAS PRINCIPALES =====
+        // ======== VISTAS PRINCIPALES ========
         [HttpGet]
         public IActionResult Index() => View();
-
         [HttpGet]
         public IActionResult InicioSesion() => View();
 
@@ -18,7 +17,6 @@ namespace Enerfit.Controllers
         public IActionResult IniciarSesion(string nombreUsuario, string contrasenia)
         {
             Usuario usuario = BD.ObtenerUsuario(nombreUsuario, contrasenia);
-
             if (usuario != null)
             {
                 HttpContext.Session.SetString("UsuarioNombre", usuario.Nombre);
@@ -57,11 +55,10 @@ namespace Enerfit.Controllers
             };
 
             BD.AgregarPerfil(nuevoPerfil);
-
             return RedirectToAction("InicioSesion");
         }
 
-        // ===== VISTAS DE SECCIONES =====
+        // ======== VISTAS DE SECCIONES ========
         public IActionResult Alimentacion() => View();
         public IActionResult Entrenamiento() => View();
         public IActionResult PlanesPorObjetivo1() => View();
@@ -78,11 +75,9 @@ namespace Enerfit.Controllers
         public IActionResult Progreso() => View();
         public IActionResult Comunidad() => View();
         public IActionResult Perfil() => View();
-
-        // ===== HEALTHBOT =====
         public IActionResult HealthBot() => View();
 
-        // --- Método AJAX que recibe el mensaje del usuario ---
+        // ======== CHATBOT ========
         [HttpPost]
         public JsonResult GetResponse(string userMessage)
         {
@@ -90,63 +85,115 @@ namespace Enerfit.Controllers
             return Json(new { reply, redirect });
         }
 
-        // --- Lógica del chatbot ---
-        private (string reply, string redirect) GetBotResponse(string input)
-        {
-            if (string.IsNullOrWhiteSpace(input))
-                return ("No te entendí 😅. Probá escribirme algo más claro.", null);
+       private (string reply, string redirect) GetBotResponse(string input)
+{
+    if (string.IsNullOrWhiteSpace(input))
+        return ("No te entendí 😅. Probá escribirme algo más claro.", null);
 
-            input = input.ToLower();
+    input = input.ToLower();
 
-            // --- SALUDOS ---
-            if (input.Contains("hola") || input.Contains("buenas") || input.Contains("hey"))
-                return ("¡Hola! Soy tu asistente de salud Enerfit 🤖 ¿Querés hablar de *entrenamiento*, *nutrición* o *hábitos saludables*?", null);
+    // ======== SALUDOS ========
+    if (input.Contains("hola") || input.Contains("buenas") || input.Contains("hey"))
+        return ("¡Hola! Soy Fitty  ¿Querés hablar de *entrenamiento*, *rutinas* o *alimentación*?", null);
 
-            if (input.Contains("cómo estás") || input.Contains("que tal"))
-                return ("¡Mejor que nunca! 💪 Estoy listo para ayudarte con tu bienestar.", null);
+    if (input.Contains("cómo estás") || input.Contains("como estas"))
+        return ("¡De maravilla y listo para ayudarte a cumplir tus metas! 💪", null);
 
-            // --- ENTRENAMIENTO ---
-            if (input.Contains("entrenamiento") || input.Contains("rutina") || input.Contains("ejercicio") || input.Contains("gimnasio"))
-                return ("Entrenar regularmente mejora tu fuerza y energía ⚡. Te llevo a la sección de entrenamiento 👉", "/Home/Entrenamiento");
+    if (input.Contains("quién sos") || input.Contains("qué sos") || input.Contains("que sos"))
+        return ("Soy tu asistente virtual Enerfit 🤖. Estoy para guiarte en tus rutinas y alimentación 💚.", null);
 
-            if (input.Contains("pesas") || input.Contains("músculo") || input.Contains("fuerza"))
-                return ("💪 Te recomiendo ejercicios compuestos como sentadillas, peso muerto y press de banca.", null);
+    // ======== ENTRENAMIENTO ========
+    if (input.Contains("entrenamiento") || input.Contains("ejercicio") || input.Contains("gimnasio"))
+        return ("Entrenar con constancia es clave 💪. Te llevo a la sección de entrenamiento 👉", "/Home/Entrenamiento");
 
-            if (input.Contains("cardio") || input.Contains("correr") || input.Contains("caminar"))
-                return ("El cardio mejora tu resistencia y salud cardiovascular 🏃. Probá 30 minutos diarios.", null);
+    if (input.Contains("crear rutina") || input.Contains("nueva rutina") || input.Contains("armar rutina"))
+        return ("Perfecto 💥 podés crear y ver tus rutinas personalizadas acá 👉", "/Home/RutinasPorZona");
 
-            // --- ALIMENTACIÓN ---
-            if (input.Contains("nutrición") || input.Contains("alimentación") || input.Contains("comida") || input.Contains("dieta"))
-                return ("🍎 Comer bien es clave para tu progreso. Te llevo a la sección de alimentación 👉", "/Home/Alimentacion");
+    if (input.Contains("rutina") || input.Contains("mi rutina") || input.Contains("rutinas"))
+        return ("Podés consultar tus rutinas por zona muscular acá 👉", "/Home/RutinasPorZona");
 
-            if (input.Contains("agua") || input.Contains("hidratar"))
-                return ("Tomar agua mejora tu rendimiento y concentración 💧. ¡Mínimo 2 litros al día!", null);
+    if (input.Contains("pierna") || input.Contains("piernas"))
+        return ("🔥 Día de piernas, ¡vamos con todo! Te llevo a los ejercicios 👉", "/Home/Piernas");
 
-            if (input.Contains("proteína") || input.Contains("pollo") || input.Contains("carne") || input.Contains("batido"))
-                return ("La proteína ayuda a reparar tus músculos 💪. Podés incluir pollo, huevos, yogur o legumbres.", null);
+    if (input.Contains("pecho"))
+        return ("💪 Pecho fuerte y definido. Mirá esta rutina 👉", "/Home/Pecho");
 
-            if (input.Contains("vegetales") || input.Contains("verdura") || input.Contains("fruta"))
-                return ("¡Excelente! 🍉 Frutas y verduras aportan vitaminas esenciales para tu energía diaria.", null);
+    if (input.Contains("hombro") || input.Contains("hombros"))
+        return ("🦾 Fortalecer hombros mejora la postura. Te llevo 👉", "/Home/Hombros");
 
-            // --- MOTIVACIÓN / HÁBITOS ---
-            if (input.Contains("motivación") || input.Contains("desmotivado") || input.Contains("ánimo"))
-                return ("No te rindas 💥. Los grandes cambios comienzan con pequeñas acciones diarias.", null);
+    if (input.Contains("bicep") || input.Contains("bíceps"))
+        return ("💪 Hora de marcar esos bíceps. Te llevo 👉", "/Home/Bicep");
 
-            if (input.Contains("descanso") || input.Contains("dormir"))
-                return ("Dormir bien ayuda a tus músculos a recuperarse 💤. Apuntá a 7-8 horas por noche.", null);
+    if (input.Contains("tricep") || input.Contains("tríceps"))
+        return ("💥 Tríceps poderosos, ¡vamos! 👉", "/Home/Tricep");
 
-            if (input.Contains("estrés") || input.Contains("ansiedad"))
-                return ("Respirá profundo 🌿. El ejercicio y una buena alimentación ayudan a reducir el estrés.", null);
+    if (input.Contains("abdomen") || input.Contains("abdominales"))
+        return ("🔥 A marcar el abdomen. Te llevo 👉", "/Home/Abdomen");
 
-            // --- CIERRES ---
-            if (input.Contains("gracias") || input.Contains("grac"))
-                return ("¡De nada! 😄 Recordá que cada paso cuenta hacia tus objetivos.", null);
+    if (input.Contains("videos") || input.Contains("tutorial") || input.Contains("ver ejercicios"))
+        return ("Podés ver los videos de ejercicios en movimiento acá 👉", "/Home/Videos");
 
-            if (input.Contains("adiós") || input.Contains("chau") || input.Contains("nos vemos"))
-                return ("¡Hasta pronto! Seguí moviéndote y cuidando tu cuerpo 🧡.", null);
+    if (input.Contains("planes") || input.Contains("objetivo"))
+        return ("¿Buscás *volumen* o *déficit*? Te muestro los planes 👉", "/Home/PlanesPorObjetivo1");
 
-            // --- RESPUESTA POR DEFECTO ---
-            return ("No entendí eso 😅. Podés hablarme de *entrenamiento*, *nutrición* o *hábitos saludables*.", null);
-        }
+    // ======== ALIMENTACIÓN ========
+    if (input.Contains("alimentación") || input.Contains("nutrición") || input.Contains("comida") || input.Contains("dieta"))
+        return ("🍎 La nutrición es clave para tus resultados. Te llevo a la sección 👉", "/Home/Alimentacion");
+
+    if (input.Contains("crear dieta") || input.Contains("nueva dieta"))
+        return ("Perfecto 🥗 Podés crear tu plan nutricional personalizado acá 👉", "/Home/Alimentacion");
+
+    if (input.Contains("receta") || input.Contains("recetas"))
+        return ("Podés explorar recetas saludables y ricas acá 👉", "/Home/Alimentacion");
+
+    if (input.Contains("ingrediente") || input.Contains("ingredientes"))
+        return ("🍅 Los ingredientes importan. Revisá la sección de alimentación 👉", "/Home/Alimentacion");
+
+    if (input.Contains("volumen"))
+        return ("🍚 Para ganar masa, una dieta con superávit calórico es ideal. Te llevo 👉", "/Home/Volumen");
+
+    if (input.Contains("déficit") || input.Contains("deficit") || input.Contains("bajar de peso"))
+        return ("🥦 Para definir o bajar grasa, mantené un déficit calórico saludable. Te llevo 👉", "/Home/Deficit");
+
+    if (input.Contains("agua") || input.Contains("hidratar"))
+        return ("💧 Recordá tomar al menos 2 litros de agua por día para rendir al máximo.", null);
+
+    // ======== DESCANSO Y MOTIVACIÓN ========
+    if (input.Contains("descanso") || input.Contains("dormir"))
+        return ("Dormir bien 💤 es clave para la recuperación muscular. Apuntá a 7–8 horas por noche.", null);
+
+    if (input.Contains("estrés") || input.Contains("ansiedad"))
+        return ("Respirá profundo 🌿. Entrenar o salir a caminar puede ayudarte a liberar tensiones.", null);
+
+    if (input.Contains("motivación") || input.Contains("ánimo") || input.Contains("desmotivado"))
+        return ("No te rindas 💥. Cada paso cuenta, incluso los más chicos. ¡Seguí adelante!", null);
+
+    // ======== PERFIL Y AYUDA ========
+    if (input.Contains("perfil") || input.Contains("mis datos") || input.Contains("mi cuenta"))
+        return ("Podés editar tu información personal o cerrar sesión desde acá 👉", "/Home/Perfil");
+
+    if (input.Contains("ayuda") || input.Contains("necesito ayuda") || input.Contains("no sé"))
+        return ("Estoy para ayudarte 💚. Podés preguntarme sobre *entrenamiento*, *rutinas* o *alimentación*.", null);
+
+    if (input.Contains("error") || input.Contains("no funciona"))
+        return ("😅 Si algo no anda bien, podés volver a intentar o revisar tu perfil 👉", "/Home/Perfil");
+
+    // ======== SECCIONES FUTURAS ========
+    if (input.Contains("progreso") || input.Contains("seguimiento"))
+        return ("📈 La sección de progreso estará disponible próximamente. ¡Pronto podrás registrar tus avances!", null);
+
+    if (input.Contains("comunidad") || input.Contains("foro") || input.Contains("personas"))
+        return ("🌍 La comunidad Enerfit está en desarrollo. Pronto podrás conectarte con otros usuarios 💬", null);
+
+    // ======== CIERRES ========
+    if (input.Contains("gracias"))
+        return ("¡De nada! 😄 Recordá que la constancia es tu mejor aliada.", null);
+
+    if (input.Contains("adiós") || input.Contains("chau") || input.Contains("nos vemos"))
+        return ("👋 ¡Hasta la próxima! Seguí moviéndote y cuidando tu cuerpo 🧡", null);
+
+    // ======== DEFAULT ========
+    return ("No entendí eso 😅. Podés hablarme de *entrenamiento*, *rutinas* o *alimentación*.", null);
+}
     }
 }
