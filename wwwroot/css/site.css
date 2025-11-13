@@ -1074,7 +1074,55 @@ h2 {
 }
 /* === Sección del botón de tutorial debajo del chatbot === */
 
+/* Proximamente */
 
+.card.bloqueada {
+  position: relative;
+  overflow: hidden;
+  pointer-events: none; /* 🔒 evita clics en los botones */
+  opacity: 0.9;
+}
+
+/* Faja diagonal completa */
+.card.bloqueada::after {
+  content: "PRÓXIMAMENTE";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 250%;
+  background: rgba(5, 245, 113, 0.75);
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 15px 0;
+  z-index: 10;
+  letter-spacing: 2px;
+}
+
+/* === Select de género (mismo estilo que editarperfil) === */
+.registro select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #FFA500;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+}
+
+.chatbot-container h2 img{
+  width: 2%;
+}
+
+.chat-box div img {
+  width: 8%;
+margin-top: 1%;
+}
 
 
 
