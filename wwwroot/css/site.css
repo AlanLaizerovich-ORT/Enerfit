@@ -15,7 +15,6 @@ body {
 }
 
 
-
 /*Header*/
 .navbar {
   display: flex;
@@ -86,7 +85,6 @@ footer img {
   margin: 0 10px;
   vertical-align: middle;
 }
-
 
 footer p:nth-of-type(1),
 footer p:nth-of-type(2) {
@@ -202,7 +200,7 @@ h5:hover {
   cursor: pointer;
 }
 
-/*Iniciosesion*/
+/*Inicio de sesion*/
 /* Contenedor principal centrado */
 body {
   font-family: Arial, sans-serif;
@@ -224,13 +222,11 @@ body {
   margin-left: 32%;
 }
 
-/* Logo */
 .login-container img {
   width: 120px;
   margin-bottom: 20px;
 }
 
-/* Labels */
 .login-container label {
   display: block;
   text-align: left;
@@ -238,7 +234,6 @@ body {
   font-weight: bold;
 }
 
-/* Inputs */
 .login-container input {
   width: 100%;
   padding: 10px;
@@ -248,11 +243,10 @@ body {
   box-sizing: border-box;
 }
 
-/* Botón */
 .login-container button {
   width: 100%;
   padding: 10px;
-  background-color: #8BC34A; /* verde */
+  background-color: #8BC34A; 
   color: white;
   border: none;
   border-radius: 4px;
@@ -261,10 +255,10 @@ body {
 }
 
 .login-container button:hover {
-  background-color: #7CB342; /* verde más oscuro al pasar el mouse */
+  background-color: #7CB342; 
 }
 
-/* Texto de registro */
+
 .login-container p {
   margin-top: 15px;
   font-size: 14px;
@@ -278,16 +272,15 @@ body {
 .login-container a:hover {
   text-decoration: underline;
 }
-/*Registro*/
+
 body {
   font-family: Arial, sans-serif;
   background-color: #fff;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Para centrar verticalmente */
+  height: 100vh; 
 }
 
-/* Caja del registro */
 .registro {
   width: 350px;
   padding: 5%;
@@ -301,13 +294,11 @@ body {
   margin-left: 34%;
 }
 
-/* Logo */
 .registro img {
   width: 120px;
   margin-bottom: 20px;
 }
 
-/* Labels */
 .registro label {
   display: block;
   text-align: left;
@@ -315,7 +306,6 @@ body {
   font-weight: bold;
 }
 
-/* Inputs */
 .registro input {
   width: 100%;
   padding: 10px;
@@ -325,11 +315,10 @@ body {
   box-sizing: border-box;
 }
 
-/* Botón */
 .registro button {
   width: 100%;
   padding: 10px;
-  background-color: #8BC34A; /* verde */
+  background-color: #8BC34A;
   color: white;
   border: none;
   border-radius: 4px;
@@ -338,10 +327,10 @@ body {
 }
 
 .registro button:hover {
-  background-color: #7CB342; /* verde más oscuro al pasar el mouse */
+  background-color: #7CB342; 
 }
 
-/* Texto de enlace */
+
 .registro p {
   margin-top: 15px;
   font-size: 14px;
@@ -488,56 +477,67 @@ section div h5 {
 .card button:hover {
   background-color: #ffb347;
 }
-.videos-section {
-  padding: 3% ;
-  text-align: center;
-}
-
- h1 {
+h1 {
   color: #2e7d32;
   text-align: center;
-  margin-top: 3%;
+  margin-top: 4%;
+  margin-bottom: 0%;
   
 }
+.videos-section {
+  padding: 0% 0;
+  text-align: center;
+  margin-bottom: 2,5%;
+}
 
+
+
+/* Contenedor general centrado */
 .videos-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  gap: 10%;
+  justify-content: center;
+  justify-items: center;  
+  margin-top: 1%;
+  margin-bottom: 1%;
   background-color: transparent;
-  gap: 10%; 
-  justify-items: center;
-  padding: 1%;
- 
+  margin-top: 0%;
+  margin-bottom: 0%;
 }
 
+/* Tarjetas */
 .video-card {
-  background-color: orange;
-  border: 1.5px solid #91c788;
+  background-color: #ffb347; /* naranja claro */
+  border: 2px solid #91c788;
   border-radius: 15px;
-  padding:5%;
+  padding: 5%;
   width: 100%;
   max-width: 320px;
-  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .video-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 .video-card iframe {
   width: 100%;
-  height: 180px; /* más chico y compacto */
+  height: 180px;
   border: none;
   border-radius: 10px;
 }
 
 .video-card h3 {
-  margin-top: 8px;
-  color: #333;
+  margin-top: 10px;
+  color: #1b1b1b;
   font-size: 1em;
   font-weight: 600;
 }
+
 .musculos-section {
   text-align: center;
   padding: 60px 0;
@@ -618,20 +618,20 @@ h2 {
 .btn-ver:hover {
   background-color: #388e3c;
 }
-/* --- CONTENEDOR PRINCIPAL --- */
+/*////CONTENEDOR PRINCIPAL//// */
 .chatbot-wrapper {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  min-height: calc(100vh - 200px); /* deja espacio para el footer */
+  min-height: calc(100vh - 200px); 
   padding: 30px 0;
   box-sizing: border-box;
 }
 
 .chatbot-container {
   width: 100%;
-  max-width: 1200px; /* más ancho que antes */
+  max-width: 1200px; 
   background: #ffffff;
   border-radius: 20px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
@@ -639,7 +639,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-bottom: 80px; /* espacio para el footer */
+  margin-bottom: 80px; 
 }
 
 /* --- Caja de chat --- */
@@ -744,13 +744,12 @@ h2 {
   background: #ff8533;
 }
 
-/* --- Animación --- */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(5px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* --- Scroll bonito --- */
+
 .chat-box::-webkit-scrollbar {
   width: 6px;
 }
@@ -758,5 +757,206 @@ h2 {
   background-color: #ff914d;
   border-radius: 3px;
 }
+/* === Editar Perfil === */
+.editarperfil {
+  width: 350px;
+  padding: 5%;
+  border: 1px solid #FFA500; /* mismo naranja que registro/login */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  background-color: #fff;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  margin-left: 34%;
+}
+
+/* Título */
+.editarperfil h2 {
+  margin-bottom: 20px;
+  color: #000;
+}
+
+/* Labels */
+.editarperfil label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Inputs y select */
+.editarperfil input,
+.editarperfil select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #FFA500;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+/* Botón principal */
+.editarperfil button {
+  width: 100%;
+  padding: 10px;
+  background-color: #8BC34A; /* verde */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.editarperfil button:hover {
+  background-color: #7CB342; /* verde más oscuro */
+}
+
+/* Botón secundario (cancelar) */
+.editarperfil .btn-secundario {
+  display: block;
+  margin-top: 10px;
+  background-color: #FFA500; /* naranja */
+  color: white;
+  padding: 10px 0;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.editarperfil .btn-secundario:hover {
+  background-color: #e69500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .editarperfil {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.perfil-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh; /* centra vertical y horizontal */
+}
+
+.perfil-card {
+  width: 30%;
+  background-color: #ffe9b3;
+  border: 1px solid #b3ffb3;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 5%;
+}
+
+.perfil-titulo {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.perfil-datos {
+  text-align: left;
+  margin-left: 1.5rem;
+}
+
+.perfil-botones {
+  margin-top: 4%;
+}
+.perfil-datos p{
+  font-size: large;
+}
+
+/* Estilo general del header */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background-color: #fff;
+  border-bottom: 2px solid #f47b20;
+}
+
+
+.active-link {
+  color: white !important;
+  background-color: #f47b20;
+  padding: 6px 14px;
+  border-radius: 8px;
+}
+.Hombros div{
+  width: 30%;
+  padding: 1%;
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+.Hombros img{
+  width: 20%;
+  height: auto;
+  
+}
+.Pecho div{
+  width: 30%;
+  padding: 1%;
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+.Pecho img{
+  width: 20%;
+  height: auto;
+  
+}
+.Pierna div{
+  width: 30%;
+  padding: 1%;
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+.Pierna img{
+  width: 20%;
+  height: auto;
+  
+}
+.Bicep div{
+  width: 30%;
+  padding: 1%;
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+.Bicep img{
+  width: 20%;
+  height: auto;
+  
+}
+.Tricep div{
+  width: 30%;
+  padding: 1%;
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+.Tricep img{
+  width: 20%;
+  height: auto;
+  
+}
+.Abdomen div{
+  width: 30%;
+  padding: 1%;
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+.Abdomen img{
+  width: 20%;
+  height: auto;
+  
+}
+
+
 
 

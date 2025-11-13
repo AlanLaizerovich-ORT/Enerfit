@@ -7,7 +7,6 @@ namespace Enerfit.Controllers
 {
     public class HomeController : Controller
     {
-        // ================= VISTAS PRINCIPALES =================
         [HttpGet]
         public IActionResult Index()
         {
@@ -21,7 +20,7 @@ namespace Enerfit.Controllers
       [HttpGet]
 public IActionResult InicioSesion()
 {
-    // ✅ Si el usuario ya tiene sesión iniciada, mandarlo al perfil
+
     if (HttpContext.Session.GetInt32("UsuarioID") != null)
         return RedirectToAction("Perfil");
 
@@ -31,7 +30,7 @@ public IActionResult InicioSesion()
         [HttpPost]
 public IActionResult IniciarSesion(string nombreUsuario, string contrasenia)
 {
-    // ✅ Si ya hay sesión activa, redirigir directamente
+   
     if (HttpContext.Session.GetInt32("UsuarioID") != null)
         return RedirectToAction("Perfil");
 
@@ -39,11 +38,11 @@ public IActionResult IniciarSesion(string nombreUsuario, string contrasenia)
 
     if (usuario != null)
     {
-        // Guardamos datos en sesión
+       
         HttpContext.Session.SetInt32("UsuarioID", usuario.IdUsuario);
         HttpContext.Session.SetString("UsuarioNombre", usuario.Nombre);
 
-        // ✅ Luego de iniciar sesión correctamente, ir al perfil
+       
         return RedirectToAction("Perfil");
     }
     else
@@ -87,7 +86,7 @@ public IActionResult IniciarSesion(string nombreUsuario, string contrasenia)
             return RedirectToAction("InicioSesion");
         }
 
-        // ================= SECCIONES =================
+      
         public IActionResult Alimentacion() => ValidarSesion(View());
         public IActionResult Entrenamiento() => ValidarSesion(View());
         public IActionResult PlanesPorObjetivo1() => ValidarSesion(View());
@@ -162,7 +161,7 @@ public IActionResult EditarPerfil(Perfil perfilActualizado)
 
     BD.ActualizarPerfil(perfilActualizado);
 
-    ViewBag.Mensaje = "✅ Perfil actualizado correctamente.";
+    ViewBag.Mensaje = " Perfil actualizado correctamente.";
     return RedirectToAction("Perfil");
 }
 

@@ -10,7 +10,7 @@
     <div class="chatbot-wrapper">
         <div class="chatbot-container">
             <header>
-                <h2> <img src="/Imagenes/Fitty.png" alt=""> HealthBot <span>Enerfit</span></h2>
+                <h2> HealthBot <span>Enerfit</span></h2>
             </header>
 
             <div id="chat-box" class="chat-box">
@@ -51,7 +51,7 @@
     $("#userMessage").val("");
     $("#chat-box").scrollTop($("#chat-box")[0].scrollHeight);
 
-    // ✅ Llamada AJAX al controlador
+    //  Llamada AJAX al controlador
     $.ajax({
         type: "POST",
         url: "/Home/GetResponse",
@@ -60,12 +60,12 @@
             // Mostrar respuesta del bot
             $("#chat-box").append(`
                 <div class="message bot-message">
-                    <div class="avatar bot-avatar">🤖</div>
+                    <div class="avatar bot-avatar"><img src="/Imagenes/Fitty.png" alt=""></div>
                     <div class="bubble">${data.reply}</div>
                 </div>
             `);
 
-            // ✅ Si el bot pide redirigir, lo hace luego de 2 segundos
+            // Si el bot pide redirigir, lo hace luego de 2 segundos
             if (data.redirect) {
                 setTimeout(() => {
                     window.location.href = data.redirect;
@@ -77,7 +77,7 @@
         error: function () {
             $("#chat-box").append(`
                 <div class="message bot-message">
-                    <div class="avatar bot-avatar">🤖</div>
+                    <div class="avatar bot-avatar"><img src="/Imagenes/Fitty.png" alt=""></div>
                     <div class="bubble">⚠️ Ocurrió un error al procesar tu mensaje.</div>
                 </div>
             `);

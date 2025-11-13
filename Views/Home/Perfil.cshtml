@@ -4,27 +4,28 @@
     ViewBag.Title = "Mi Perfil";
 }
 
-<div class="container mt-4">
-    <div class="card p-4 shadow-sm">
-        <h2 class="text-center mb-4">👤 Mi Perfil</h2>
+<div class="perfil-container">
+    <div class="perfil-card">
+        <h5 class="perfil-titulo">👤 Mi Perfil</h5>
 
         @if (Model != null)
         {
-            <ul class="list-group">
-                <li class="list-group-item"><strong>Nombre:</strong> @Model.Nombre</li>
-                <li class="list-group-item"><strong>Apellido:</strong> @Model.Apellido</li>
-                <li class="list-group-item"><strong>Email:</strong> @Model.Email</li>
-                <li class="list-group-item"><strong>Sexo:</strong> @Model.Sexo</li>
-            </ul>
+            <div class="perfil-datos">
+                <p><strong>Nombre:</strong> @Model.Nombre</p>
+                <p><strong>Apellido:</strong> @Model.Apellido</p>
+                <p><strong>Email:</strong> @Model.Email</p>
+                <p><strong>Sexo:</strong> @Model.Sexo</p>
+            </div>
 
-            <div class="text-center mt-4">
-                <a href="/Home/EditarPerfil" class="btn btn-primary">Editar</a>
+            <div class="perfil-botones">
+                <a href="/Home/EditarPerfil" class="btn btn-warning me-2">Editar</a><br>
+                <br>
                 <a href="/Home/CerrarSesion" class="btn btn-danger">Cerrar Sesión</a>
             </div>
         }
         else
         {
-            <p class="text-danger text-center">No se encontraron datos del perfil.</p>
+            <p class="text-danger">No se encontraron datos del perfil.</p>
         }
     </div>
 </div>

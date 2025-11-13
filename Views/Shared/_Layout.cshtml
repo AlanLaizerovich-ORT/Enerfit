@@ -14,13 +14,23 @@
             <div class="logo">
                <a href="/Home/Index"> <img src="/Imagenes/Logo.png" alt="Enerfit" /></a>
             </div>
-            <ul class="nav-links">
-                <li><a href="/Home/Comunidad">Comunidad</a></li>
-                <li><a href="/Home/Alimentacion">Alimentación</a></li>
-                <li><a href="/Home/Entrenamiento">Entrenamiento</a></li>
-                <li><a href="/Home/HealthBot">HealthBot</a></li>
-                <li><a href="/Home/Progreso">Progreso</a></li>
-            </ul>
+           <ul class="nav-links">
+    <li>
+        <a href="/Home/Comunidad" class="@(ViewContext.RouteData.Values["action"]?.ToString() == "Comunidad" ? "active-link" : "")">Comunidad</a>
+    </li>
+    <li>
+        <a href="/Home/Alimentacion" class="@(ViewContext.RouteData.Values["action"]?.ToString() == "Alimentacion" ? "active-link" : "")">Alimentación</a>
+    </li>
+    <li>
+        <a href="/Home/Entrenamiento" class="@(ViewContext.RouteData.Values["action"]?.ToString() == "Entrenamiento" ? "active-link" : "")">Entrenamiento</a>
+    </li>
+    <li>
+        <a href="/Home/HealthBot" class="@(ViewContext.RouteData.Values["action"]?.ToString() == "HealthBot" ? "active-link" : "")">HealthBot</a>
+    </li>
+    <li>
+        <a href="/Home/Progreso" class="@(ViewContext.RouteData.Values["action"]?.ToString() == "Progreso" ? "active-link" : "")">Progreso</a>
+    </li>
+</ul>
             <div class="user-icon">
 <a href="/Home/InicioSesion">
     <img src="/Imagenes/Perfil.png" alt="Usuario" style="width:50px; height:50px; cursor:pointer;" />
