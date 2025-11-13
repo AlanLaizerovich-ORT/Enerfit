@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/V/r8BeS/d5Ljk9g3BsK7KJE2oS80JL0bFHEuXIF5+lJ5/GYAbH2su0ZPR7z+YqwoGMAhvTBSigktTyGDYt/YA==",
+  "dgSpecHash": "aky+1WBtGLxcbTvDe2hXlxjnsICmHv6EgkKwfIIQcCwIzmpf3XF7MDOmaT5MPUATxwVAAPT9END4101Rqd4ozg==",
   "success": true,
   "projectFilePath": "C:\\Users\\49518922\\Downloads\\1\\Enerfit\\Enerfit-Proyecto.csproj",
   "expectedPackageFiles": [
@@ -17,7 +17,7 @@
     "C:\\Users\\49518922\\.nuget\\packages\\microsoft.aspnetcore.session\\2.3.0\\microsoft.aspnetcore.session.2.3.0.nupkg.sha512",
     "C:\\Users\\49518922\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\8.0.0\\microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
     "C:\\Users\\49518922\\.nuget\\packages\\microsoft.bcl.cryptography\\8.0.0\\microsoft.bcl.cryptography.8.0.0.nupkg.sha512",
-    "C:\\Users\\49518922\\.nuget\\packages\\microsoft.data.sqlclient\\6.1.2\\microsoft.data.sqlclient.6.1.2.nupkg.sha512",
+    "C:\\Users\\49518922\\.nuget\\packages\\microsoft.data.sqlclient\\6.1.3\\microsoft.data.sqlclient.6.1.3.nupkg.sha512",
     "C:\\Users\\49518922\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\6.0.2\\microsoft.data.sqlclient.sni.runtime.6.0.2.nupkg.sha512",
     "C:\\Users\\49518922\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\49518922\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.1\\microsoft.extensions.caching.memory.8.0.1.nupkg.sha512",

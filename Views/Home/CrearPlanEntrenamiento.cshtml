@@ -1,0 +1,51 @@
+@{
+    ViewData["Title"] = "CrearPlanEntrenamiento";
+}
+
+<div class="login-container">
+    <img src="/Imagenes/Logo.png" alt="Logo Enerfit" />
+
+ <form asp-controller="Home" asp-action="IniciarSesion" method="post">
+
+          <label>Peso</label>
+    <input type="text" name="Peso" placeholder="Ingresa" />
+
+    <label>Altura</label>
+    <input type="text" name="Altura" placeholder="Ingresa" />
+
+    <label>Edad</label>
+    <input type="number" name="Edad" placeholder="Ingresa" />
+
+    <label>Sexo</label>
+    <select name="Sexo">
+        <option value="">Seleccionar</option>
+        <option value="Masculino">Masculino</option>
+        <option value="Femenino">Femenino</option>
+        <option value="Otro">Otro</option>
+    </select>
+
+    <label>Lugar donde entrenas</label>
+    <input type="text" name="LugarEntrenas" placeholder="Ingresa" />
+
+    <label>Objetivo principal</label>
+    <input type="text" name="Objetivo" placeholder="Ingresa" />
+
+    <label>Tiempo disponible</label>
+    <input type="text" name="Tiempo" placeholder="Ingresa" />
+
+    <label>Equipamiento disponible</label>
+    <input type="text" name="Equipamiento" placeholder="Ingresa" />
+
+    <label>Lesiones actuales o previas</label>
+    <input type="text" name="Lesiones" placeholder="Ingresa" />
+
+    <label>Problemas médicos o restricciones</label>
+    <input type="text" name="ProblemasMedicos" placeholder="Ingresa" />
+
+    <br />
+
+    <button type="submit">Crear</button>
+    <button type="reset">Resetear</button>
+</form>
+
+</div>

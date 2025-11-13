@@ -1,0 +1,29 @@
+@model Enerfit.Models.Perfil
+@{
+    ViewData["Title"] = "Editar Perfil";
+}
+
+<div class="form-container">
+    <h2>Editar Perfil</h2>
+
+    <form asp-action="EditarPerfil" method="post">
+        <label for="Nombre">Nombre:</label>
+        <input type="text" id="Nombre" name="Nombre" value="@Model.Nombre" required />
+
+        <label for="Apellido">Apellido:</label>
+        <input type="text" id="Apellido" name="Apellido" value="@Model.Apellido" required />
+
+        <label for="Email">Email:</label>
+        <input type="email" id="Email" name="Email" value="@Model.Email" required />
+
+        <label for="Sexo">Sexo:</label>
+        <select id="Sexo" name="Sexo">
+            <option value="Masculino" @(Model.Sexo == "Masculino" ? "selected" : "")>Masculino</option>
+            <option value="Femenino" @(Model.Sexo == "Femenino" ? "selected" : "")>Femenino</option>
+            <option value="Otro" @(Model.Sexo == "Otro" ? "selected" : "")>Otro</option>
+        </select>
+
+        <button type="submit">Guardar Cambios</button>
+        <a href="/Home/Perfil" class="btn-secundario">Cancelar</a>
+    </form>
+</div>

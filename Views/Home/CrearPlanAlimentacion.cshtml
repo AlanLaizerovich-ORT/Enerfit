@@ -1,0 +1,86 @@
+@{
+    ViewData["Title"] = "CrearPlanAlimentacion";
+}
+
+
+<div class="login-container">
+    <img src="/Imagenes/Logo.png" alt="Logo Enerfit" />
+
+ <form asp-controller="Home" asp-action="IniciarSesion" method="post">
+
+        <label for="Edad">Edad:</label>
+        <input type="number" id="nombreUsuario" name="nombreUsuario" />
+
+        <label for="contrasenia">Sexo:</label>
+        <select name="Sexo">
+        <option value="">Seleccionar</option>
+        <option value="Masculino">Masculino</option>
+        <option value="Femenino">Femenino</option>
+        <option value="Otro">Otro</option>
+        </select>
+
+        <label for="contrasenia">altura (cm):</label>
+        <input type="password" id="contrasenia" name="contrasenia" />
+
+        <label for="contrasenia">Peso actual (kg):</label>
+        <input type="password" id="contrasenia" name="contrasenia" />
+
+        <label for="contrasenia">Peso objetivo (kg):</label>
+        <input type="password" id="contrasenia" name="contrasenia" />
+
+        <label for="contrasenia">Objetivo principal:</label>
+        <select name="Sexo">
+        <option value="">Seleccionar</option>
+        <option value="Masculino">Bajar grasa</option>
+        <option value="Femenino">Ganar Musculo</option>
+        <option value="Otro">Mantener peso</option>
+        <option value="Otro">Mejorar salud</option>
+        <option value="Otro">Otro</option>
+        </select>
+
+        <label for="contrasenia">Numero de comidas al dia que preferis:</label>
+        <select name="Sexo">
+         <option value="">Seleccionar</option>
+        <option value="Masculino">3</option>
+        <option value="Femenino">4</option>
+        <option value="Otro">5</option>
+        <option value="Otro">Flexible</option>
+        <option value="Otro">Otro</option>
+        </select>
+
+        <label for="contrasenia">Alimentos que te gustan o querés incluir:</label>
+        <input type="text" name="Tiempo" placeholder="Ingresa" />
+
+        <label for="contrasenia">Alimentos que NO te gustan o no querés incluir:</label>
+        <input type="text" name="Tiempo" placeholder="Ingresa" />
+
+        <label for="contrasenia">Alergias o intolerancias alimentarias:</label>
+        <input type="text" name="Tiempo" placeholder="Ingresa" />
+
+        <label for="contrasenia">Tipo de alimentación:</label>
+        <select name="Sexo">
+        <option value="">Seleccionar</option>
+        <option value="Masculino">Omnivora</option>
+        <option value="Femenino">Vegetariana</option>
+        <option value="Otro">Vegana</option>
+        <option value="Otro">Keto</option>
+        <option value="Otro">Mediterrantea</option>
+        <option value="Otro">Otra</option>
+        </select>
+
+        <label for="contrasenia">Condiciones médicas relevantes</label>
+        <input type="text" name="Tiempo" placeholder="Ingresa" />
+
+        <label for="contrasenia">Tiempo disponible para cocinar por día:</label>
+        <select name="Sexo">
+        <option value="">Seleccionar</option>
+        <option value="Masculino">Menor a 15 min></option>
+        <option value="Femenino">15-30 min</option>
+        <option value="Otro">+ 30 min</option>
+        <option value="Otro">Otro</option>
+        </select>
+        
+        <button type="submit">Crear</button>
+    </form>
+
+</div>  

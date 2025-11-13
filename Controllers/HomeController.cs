@@ -7,26 +7,55 @@ namespace Enerfit.Controllers
 {
     public class HomeController : Controller
     {
-        // ======== VISTAS PRINCIPALES ========
+        // ================= VISTAS PRINCIPALES =================
         [HttpGet]
-        public IActionResult Index() => View();
-        [HttpGet]
-        public IActionResult InicioSesion() => View();
+        public IActionResult Index()
+        {
+            if (HttpContext.Session.GetInt32("UsuarioID") == null)
+                return RedirectToAction("InicioSesion");
+
+            ViewBag.UsuarioNombre = HttpContext.Session.GetString("UsuarioNombre");
+            return View();
+        }
+
+      [HttpGet]
+public IActionResult InicioSesion()
+{
+    // ✅ Si el usuario ya tiene sesión iniciada, mandarlo al perfil
+    if (HttpContext.Session.GetInt32("UsuarioID") != null)
+        return RedirectToAction("Perfil");
+
+    return View();
+}
 
         [HttpPost]
-        public IActionResult IniciarSesion(string nombreUsuario, string contrasenia)
+public IActionResult IniciarSesion(string nombreUsuario, string contrasenia)
+{
+    // ✅ Si ya hay sesión activa, redirigir directamente
+    if (HttpContext.Session.GetInt32("UsuarioID") != null)
+        return RedirectToAction("Perfil");
+
+    Usuario usuario = BD.ObtenerUsuario(nombreUsuario, contrasenia);
+
+    if (usuario != null)
+    {
+        // Guardamos datos en sesión
+        HttpContext.Session.SetInt32("UsuarioID", usuario.IdUsuario);
+        HttpContext.Session.SetString("UsuarioNombre", usuario.Nombre);
+
+        // ✅ Luego de iniciar sesión correctamente, ir al perfil
+        return RedirectToAction("Perfil");
+    }
+    else
+    {
+        ViewBag.Error = "Usuario o contraseña incorrectos.";
+        return View("InicioSesion");
+    }
+}
+        public IActionResult CerrarSesion()
         {
-            Usuario usuario = BD.ObtenerUsuario(nombreUsuario, contrasenia);
-            if (usuario != null)
-            {
-                HttpContext.Session.SetString("UsuarioNombre", usuario.Nombre);
-                return RedirectToAction("Index");
-            }
-            else
-            {
-                ViewBag.Error = "Usuario o contraseña incorrectos.";
-                return View("InicioSesion");
-            }
+            HttpContext.Session.Clear();
+            return RedirectToAction("InicioSesion");
         }
 
         public IActionResult IrARegistro() => RedirectToAction("Registro");
@@ -58,24 +87,86 @@ namespace Enerfit.Controllers
             return RedirectToAction("InicioSesion");
         }
 
-        // ======== VISTAS DE SECCIONES ========
-        public IActionResult Alimentacion() => View();
-        public IActionResult Entrenamiento() => View();
-        public IActionResult PlanesPorObjetivo1() => View();
-        public IActionResult Videos() => View();
-        public IActionResult RutinasPorZona() => View();
-        public IActionResult Hombros() => View();
-        public IActionResult Piernas() => View();
-        public IActionResult Bicep() => View();
-        public IActionResult Tricep() => View();
-        public IActionResult Abdomen() => View();
-        public IActionResult Pecho() => View();
-        public IActionResult Volumen() => View();
-        public IActionResult Deficit() => View();
-        public IActionResult Progreso() => View();
-        public IActionResult Comunidad() => View();
-        public IActionResult Perfil() => View();
-        public IActionResult HealthBot() => View();
+        // ================= SECCIONES =================
+        public IActionResult Alimentacion() => ValidarSesion(View());
+        public IActionResult Entrenamiento() => ValidarSesion(View());
+        public IActionResult PlanesPorObjetivo1() => ValidarSesion(View());
+        public IActionResult Videos() => ValidarSesion(View());
+        public IActionResult RutinasPorZona() => ValidarSesion(View());
+        public IActionResult Hombros() => ValidarSesion(View());
+        public IActionResult Piernas() => ValidarSesion(View());
+        public IActionResult Bicep() => ValidarSesion(View());
+        public IActionResult Tricep() => ValidarSesion(View());
+        public IActionResult Abdomen() => ValidarSesion(View());
+        public IActionResult Pecho() => ValidarSesion(View());
+        public IActionResult Volumen() => ValidarSesion(View());
+        public IActionResult Deficit() => ValidarSesion(View());
+        public IActionResult Progreso() => ValidarSesion(View());
+        public IActionResult Comunidad() => ValidarSesion(View());
+        public IActionResult HealthBot() => ValidarSesion(View());
+        public IActionResult CrearPlanEntrenamiento() => ValidarSesion(View());
+        public IActionResult CrearPlanAlimentacion() => ValidarSesion(View());
+
+        public IActionResult Perfil()
+        {
+            int? idUsuario = HttpContext.Session.GetInt32("UsuarioID");
+
+            if (idUsuario == null)
+                return RedirectToAction("InicioSesion");
+
+            Perfil perfil = BD.ObtenerPerfilPorUsuario(idUsuario.Value);
+
+            if (perfil == null)
+            {
+                ViewBag.Error = "No se encontró el perfil del usuario.";
+                return View();
+            }
+
+            return View(perfil);
+        }
+          private IActionResult ValidarSesion(IActionResult vista)
+        {
+            if (HttpContext.Session.GetInt32("UsuarioID") == null)
+                return RedirectToAction("InicioSesion");
+
+            return vista;
+        }
+        [HttpGet]
+public IActionResult EditarPerfil()
+{
+    int? idUsuario = HttpContext.Session.GetInt32("UsuarioID");
+
+    if (idUsuario == null)
+        return RedirectToAction("InicioSesion");
+
+    Perfil perfil = BD.ObtenerPerfilPorUsuario(idUsuario.Value);
+
+    if (perfil == null)
+    {
+        ViewBag.Error = "No se encontró el perfil del usuario.";
+        return RedirectToAction("Perfil");
+    }
+
+    return View(perfil);
+}
+
+[HttpPost]
+public IActionResult EditarPerfil(Perfil perfilActualizado)
+{
+    int? idUsuario = HttpContext.Session.GetInt32("UsuarioID");
+
+    if (idUsuario == null)
+        return RedirectToAction("InicioSesion");
+
+    perfilActualizado.IDUsuario = idUsuario.Value;
+
+    BD.ActualizarPerfil(perfilActualizado);
+
+    ViewBag.Mensaje = "✅ Perfil actualizado correctamente.";
+    return RedirectToAction("Perfil");
+}
+
+
 
         // ======== CHATBOT ========
         [HttpPost]

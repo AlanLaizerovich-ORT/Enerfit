@@ -62,5 +62,37 @@ namespace Enerfit
                 connection.Execute(query, new { pId = IDUsuario });
             }
         }
+        public static Perfil ObtenerPerfilPorUsuario(int idUsuario)
+{
+    using (SqlConnection connection = new SqlConnection(_connectionString))
+    {
+        string query = "SELECT * FROM Perfil WHERE IdUsuario = @pIdUsuario";
+        return connection.QueryFirstOrDefault<Perfil>(query, new { pIdUsuario = idUsuario });
+    }
+}
+public static void ActualizarPerfil(Perfil perfilActualizado)
+{
+    using (SqlConnection connection = new SqlConnection(_connectionString))
+    {
+        string query = @"
+            UPDATE Perfil
+            SET Nombre = @pNombre,
+                Apellido = @pApellido,
+                Email = @pEmail,
+                Sexo = @pSexo
+            WHERE IdUsuario = @pIdUsuario";
+
+        connection.Execute(query, new
+        {
+            pNombre = perfilActualizado.Nombre,
+            pApellido = perfilActualizado.Apellido,
+            pEmail = perfilActualizado.Email,
+            pSexo = perfilActualizado.Sexo,
+            pIdUsuario = perfilActualizado.IDUsuario
+        });
+    }
+}
+
+
     }
 }

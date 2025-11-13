@@ -34,8 +34,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb211bmlkYWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/49518922/Downloads/1/Enerfit/Views/Home/CrearPlanAlimentacion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhclBsYW5BbGltZW50YWNpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/49518922/Downloads/1/Enerfit/Views/Home/CrearPlanEntrenamiento.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhclBsYW5FbnRyZW5hbWllbnRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/49518922/Downloads/1/Enerfit/Views/Home/Deficit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZWZpY2l0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/49518922/Downloads/1/Enerfit/Views/Home/EditarPerfil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0YXJQZXJmaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/49518922/Downloads/1/Enerfit/Views/Home/EjerciciosPorZonas.cshtml]
