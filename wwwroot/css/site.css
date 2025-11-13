@@ -509,7 +509,7 @@ h1 {
 
 /* Tarjetas */
 .video-card {
-  background-color: #ffb347; /* naranja claro */
+  background-color: #ffb347; 
   border: 2px solid #91c788;
   border-radius: 15px;
   padding: 5%;
@@ -761,7 +761,7 @@ h2 {
 .editarperfil {
   width: 350px;
   padding: 5%;
-  border: 1px solid #FFA500; /* mismo naranja que registro/login */
+  border: 1px solid #FFA500; 
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   text-align: center;
@@ -802,7 +802,7 @@ h2 {
 .editarperfil button {
   width: 100%;
   padding: 10px;
-  background-color: #8BC34A; /* verde */
+  background-color: #8BC34A; 
   color: white;
   border: none;
   border-radius: 4px;
@@ -812,14 +812,14 @@ h2 {
 }
 
 .editarperfil button:hover {
-  background-color: #7CB342; /* verde más oscuro */
+  background-color: #7CB342; 
 }
 
 /* Botón secundario (cancelar) */
 .editarperfil .btn-secundario {
   display: block;
   margin-top: 10px;
-  background-color: #FFA500; /* naranja */
+  background-color: #FFA500; 
   color: white;
   padding: 10px 0;
   border-radius: 4px;
@@ -843,7 +843,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 90vh; /* centra vertical y horizontal */
+  min-height: 90vh; 
 }
 
 .perfil-card {
@@ -956,6 +956,124 @@ h2 {
   height: auto;
   
 }
+
+/* === TUTORIAL FITTY === */
+.tutorial-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.tutorial-card {
+  background-color: #ffffff;
+  border: 2px solid #ffa50070;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  padding: 40px;
+  width: 100%;
+  text-align: left;
+}
+
+.tutorial-card h2 {
+  color: #2e7d32;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.tutorial-card h4 {
+  color: #f47b20;
+  margin-top: 25px;
+  font-weight: 600;
+}
+
+.tutorial-card p {
+  color: #333;
+  line-height: 1.6;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.tutorial-card p.lead {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.tutorial-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.tutorial-card ul li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.tutorial-card ul li::before {
+  content: "✅ ";
+  color: #39a45b;
+}
+
+.tutorial-card hr {
+  border-top: 2px solid #ffb84d;
+  margin: 20px 0;
+}
+
+.tutorial-card em {
+  color: #555;
+  font-style: italic;
+}
+
+.tutorial-card strong {
+  color: #2e7d32;
+}
+
+/* --- Botón para ir al asistente --- */
+.btn-fitty {
+  display: inline-block;
+  background-color: #8bc34a;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 35px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(139, 195, 74, 0.4);
+  transition: all 0.3s ease;
+  margin-top: 30px;
+}
+
+.btn-fitty:hover {
+  background-color: #7cb342;
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(124, 179, 66, 0.5);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .tutorial-card {
+    padding: 25px;
+  }
+
+  .tutorial-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn-fitty {
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
+}
+/* === Sección del botón de tutorial debajo del chatbot === */
+
 
 
 

@@ -32,7 +32,7 @@ public IActionResult IniciarSesion(string nombreUsuario, string contrasenia)
 {
    
     if (HttpContext.Session.GetInt32("UsuarioID") != null)
-        return RedirectToAction("Perfil");
+        return RedirectToAction("Index");
 
     Usuario usuario = BD.ObtenerUsuario(nombreUsuario, contrasenia);
 
@@ -43,7 +43,7 @@ public IActionResult IniciarSesion(string nombreUsuario, string contrasenia)
         HttpContext.Session.SetString("UsuarioNombre", usuario.Nombre);
 
        
-        return RedirectToAction("Perfil");
+        return RedirectToAction("Index");
     }
     else
     {
@@ -63,28 +63,48 @@ public IActionResult IniciarSesion(string nombreUsuario, string contrasenia)
         public IActionResult Registro() => View();
 
         [HttpPost]
-        public IActionResult Registro(string nombreUsuario, string contrasenia, string nombre, string apellido, string email, string sexo)
-        {
-            var nuevoUsuario = new Usuario
-            {
-                Nombre = nombreUsuario,
-                Contrasenia = contrasenia
-            };
+        [HttpPost]
+public IActionResult Registro(string nombreUsuario, string contrasenia, string nombre, string apellido, string email, string sexo)
+{
+    // ✅ Validar duplicado de nombre de usuario
+    if (BD.ExisteNombreUsuario(nombreUsuario))
+    {
+        ViewBag.Error = "El nombre de usuario ya está en uso. Por favor elegí otro.";
+        return View();
+    }
 
-            int nuevoId = BD.AgregarUsuario(nuevoUsuario);
+    // ✅ Validar duplicado de email
+    if (BD.ExisteEmail(email))
+    {
+        ViewBag.Error = "El email ya está registrado. Usá otro correo.";
+        return View();
+    }
 
-            var nuevoPerfil = new Perfil
-            {
-                Nombre = nombre,
-                Apellido = apellido,
-                Email = email,
-                Sexo = sexo,
-                IDUsuario = nuevoId
-            };
+    // ✅ Crear usuario y perfil si todo está OK
+    var nuevoUsuario = new Usuario
+    {
+        Nombre = nombreUsuario,
+        Contrasenia = contrasenia
+    };
 
-            BD.AgregarPerfil(nuevoPerfil);
-            return RedirectToAction("InicioSesion");
-        }
+    int nuevoId = BD.AgregarUsuario(nuevoUsuario);
+
+    var nuevoPerfil = new Perfil
+    {
+        Nombre = nombre,
+        Apellido = apellido,
+        Email = email,
+        Sexo = sexo,
+        IDUsuario = nuevoId
+    };
+
+    BD.AgregarPerfil(nuevoPerfil);
+
+    ViewBag.Mensaje = "Usuario registrado correctamente. Ahora podés iniciar sesión.";
+    return RedirectToAction("InicioSesion");
+}
+
+        
 
       
         public IActionResult Alimentacion() => ValidarSesion(View());
@@ -105,6 +125,7 @@ public IActionResult IniciarSesion(string nombreUsuario, string contrasenia)
         public IActionResult HealthBot() => ValidarSesion(View());
         public IActionResult CrearPlanEntrenamiento() => ValidarSesion(View());
         public IActionResult CrearPlanAlimentacion() => ValidarSesion(View());
+        public IActionResult Tutorial() => ValidarSesion(View());
 
         public IActionResult Perfil()
         {

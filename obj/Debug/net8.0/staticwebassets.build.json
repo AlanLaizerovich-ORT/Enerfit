@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VU5HX9TgnK8uhnvEoDS/JvTveHI2rfPl0XNrhFaCYBU=",
+  "Hash": "xzLcwISFxByaJ/IB/muFIJ0PfKkAoRBDFsjFl7u1Mhs=",
   "Source": "Enerfit-Proyecto",
   "BasePath": "_content/Enerfit-Proyecto",
   "Mode": "Default",
@@ -1060,6 +1060,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit\\wwwroot\\js\\validaciones.js",
+      "SourceId": "Enerfit-Proyecto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit\\wwwroot\\",
+      "BasePath": "_content/Enerfit-Proyecto",
+      "RelativePath": "js/validaciones.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\validaciones.js"
     },
     {
       "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",

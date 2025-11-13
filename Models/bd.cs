@@ -92,6 +92,26 @@ public static void ActualizarPerfil(Perfil perfilActualizado)
         });
     }
 }
+public static bool ExisteEmail(string email)
+{
+    using (SqlConnection connection = new SqlConnection(_connectionString))
+    {
+        string query = "SELECT COUNT(*) FROM Perfil WHERE Email = @pEmail";
+        int count = connection.ExecuteScalar<int>(query, new { pEmail = email });
+        return count > 0;
+    }
+}
+
+public static bool ExisteNombreUsuario(string nombreUsuario)
+{
+    using (SqlConnection connection = new SqlConnection(_connectionString))
+    {
+        string query = "SELECT COUNT(*) FROM Usuario WHERE Nombre = @pNombre";
+        int count = connection.ExecuteScalar<int>(query, new { pNombre = nombreUsuario });
+        return count > 0;
+    }
+}
+
 
 
     }
