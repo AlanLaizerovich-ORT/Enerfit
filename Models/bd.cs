@@ -10,7 +10,7 @@ namespace Enerfit
             @"Server=localhost;DataBase=Enerfit;Integrated Security=True;TrustServerCertificate=True;";
 
         public static Usuario ObtenerUsuario(string nombreUsuario, string contrasenia)
-        {
+        {   
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 string query = "SELECT * FROM Usuario WHERE Nombre = @pNombre AND Contrasenia = @pContrasenia";
@@ -109,6 +109,78 @@ public static bool ExisteNombreUsuario(string nombreUsuario)
         string query = "SELECT COUNT(*) FROM Usuario WHERE Nombre = @pNombre";
         int count = connection.ExecuteScalar<int>(query, new { pNombre = nombreUsuario });
         return count > 0;
+    }
+}
+// ===================== RECETAS ======================
+
+public static List<Recetas> ObtenerRecetas()
+{
+    using (SqlConnection connection = new SqlConnection(_connectionString))
+    {
+        string query = "SELECT * FROM Recetas";
+        return connection.Query<Recetas>(query).ToList();
+    }
+}
+
+public static Recetas ObtenerRecetaPorId(int id)
+{
+    using (SqlConnection connection = new SqlConnection(_connectionString))
+    {
+        string query = "SELECT * FROM Recetas WHERE IdRecetas = @pId";
+        return connection.QueryFirstOrDefault<Recetas>(query, new { pId = id });
+    }
+}
+
+public static void CrearReceta(Recetas receta)
+{
+    using (SqlConnection connection = new SqlConnection(_connectionString))
+    {
+        string query = @"
+            INSERT INTO Recetas (nombreReceta, Calorias, Proteinas, Carbohidratos, Ingredientes)
+            VALUES (@pNombre, @pCalorias, @pProteinas, @pCarbohidratos, @pIngredientes)";
+        
+        connection.Execute(query, new 
+        {
+            pNombre = receta.nombreReceta,
+            pCalorias = receta.Calorias,
+            pProteinas = receta.Proteinas,
+            pCarbohidratos = receta.Carbohidratos,
+            pIngredientes = receta.Ingredientes
+        });
+    }
+}
+
+public static void EditarReceta(Recetas receta)
+{
+    using (SqlConnection connection = new SqlConnection(_connectionString))
+    {
+        string query = @"
+            UPDATE Recetas
+            SET nombreReceta = @pNombre,
+                Calorias = @pCalorias,
+                Proteinas = @pProteinas,
+                Carbohidratos = @pCarbohidratos,
+                IdIngredientes = @pIdIngredientes
+            WHERE IdRecetas = @pIdRecetas";
+
+        connection.Execute(query, new 
+        {
+            pNombre = receta.nombreReceta,
+            pCalorias = receta.Calorias,
+            pProteinas = receta.Proteinas,
+            pCarbohidratos = receta.Carbohidratos,
+            pIdIngredientes = receta.IdIngredientes,
+            pIdRecetas = receta.IdRecetas
+        });
+    }
+}
+
+public static void BorrarReceta(int id)
+{
+    using (SqlConnection connection = new SqlConnection(_connectionString))
+    {
+        string query = "DELETE FROM Recetas WHERE IdRecetas = @pId";
+        connection.Execute(query, new { pId = id });
     }
 }
 

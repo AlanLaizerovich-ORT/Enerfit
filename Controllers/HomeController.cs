@@ -66,21 +66,18 @@ public IActionResult IniciarSesion(string nombreUsuario, string contrasenia)
         [HttpPost]
 public IActionResult Registro(string nombreUsuario, string contrasenia, string nombre, string apellido, string email, string sexo)
 {
-    // ✅ Validar duplicado de nombre de usuario
     if (BD.ExisteNombreUsuario(nombreUsuario))
     {
         ViewBag.Error = "El nombre de usuario ya está en uso. Por favor elegí otro.";
         return View();
     }
 
-    // ✅ Validar duplicado de email
+
     if (BD.ExisteEmail(email))
     {
         ViewBag.Error = "El email ya está registrado. Usá otro correo.";
         return View();
     }
-
-    // ✅ Crear usuario y perfil si todo está OK
     var nuevoUsuario = new Usuario
     {
         Nombre = nombreUsuario,
@@ -126,6 +123,7 @@ public IActionResult Registro(string nombreUsuario, string contrasenia, string n
         public IActionResult CrearPlanEntrenamiento() => ValidarSesion(View());
         public IActionResult CrearPlanAlimentacion() => ValidarSesion(View());
         public IActionResult Tutorial() => ValidarSesion(View());
+        public IActionResult CrearRecetas() => ValidarSesion(View());
 
         public IActionResult Perfil()
         {
@@ -306,5 +304,70 @@ public IActionResult EditarPerfil(Perfil perfilActualizado)
     // ======== DEFAULT ========
     return ("No entendí eso 😅. Podés hablarme de *entrenamiento*, *rutinas* o *alimentación*.", null);
 }
+public IActionResult Recetas()
+{
+    if (HttpContext.Session.GetInt32("UsuarioID") == null)
+        return RedirectToAction("InicioSesion");
+
+    var recetas = BD.ObtenerRecetas();
+    return View(recetas); // SOLO muestra la lista
+}
+
+// =======================
+//     CREAR RECETA
+// =======================
+
+
+[HttpPost]
+public IActionResult CrearReceta(Recetas receta)
+{
+    BD.CrearReceta(receta);
+    return RedirectToAction("Recetas");
+}
+
+// =======================
+//     VER / EDITAR
+// =======================
+[HttpGet]
+public IActionResult VerReceta(int id)
+{
+    if (HttpContext.Session.GetInt32("UsuarioID") == null)
+        return RedirectToAction("InicioSesion");
+
+    var receta = BD.ObtenerRecetaPorId(id);
+
+    // SOLO se muestra cuando tocás el botón "Ver"
+    return View("VerReceta", receta);
+}
+
+[HttpGet]
+public IActionResult EditarReceta(int id)
+{
+    if (HttpContext.Session.GetInt32("UsuarioID") == null)
+        return RedirectToAction("InicioSesion");
+
+    var receta = BD.ObtenerRecetaPorId(id);
+
+    // SOLO cuando tocás "Editar"
+    return View("EditarReceta", receta);
+}
+
+[HttpPost]
+public IActionResult EditarReceta(Recetas receta)
+{
+    BD.EditarReceta(receta);
+    return RedirectToAction("Recetas");
+}
+
+// =======================
+//     BORRAR
+// =======================
+public IActionResult BorrarReceta(int id)
+{
+    BD.BorrarReceta(id);
+    return RedirectToAction("Recetas");
+}
+
     }
+    
 }

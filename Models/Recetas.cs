@@ -6,6 +6,7 @@ public class Recetas {
  public int Calorias { get; set; }
  public int Proteinas { get; set; }
  public int Carbohidratos { get; set; }
+public string Ingredientes { get; set; }
 
         public int IdIngredientes { get; set; }
 

@@ -2,10 +2,10 @@
     ViewData["Title"] = "CrearPlanEntrenamiento";
 }
 
-<div class="login-container">
+<div class="formulario1">
     <img src="/Imagenes/Logo.png" alt="Logo Enerfit" />
 
- <form asp-controller="Home" asp-action="IniciarSesion" method="post">
+ <form asp-controller="Home" asp-action="CrearPlanEntrenamiento" method="post">
 
           <label>Peso</label>
     <input type="text" name="Peso" placeholder="Ingresa" />
@@ -42,10 +42,8 @@
     <label>Problemas médicos o restricciones</label>
     <input type="text" name="ProblemasMedicos" placeholder="Ingresa" />
 
-    <br />
-
     <button type="submit">Crear</button>
-    <button type="reset">Resetear</button>
+    <button class = "btn-secundario" type="reset">Resetear</button>
 </form>
 
 </div>

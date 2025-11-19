@@ -758,7 +758,7 @@ h2 {
   border-radius: 3px;
 }
 /* === Editar Perfil === */
-.editarperfil {
+.formulario1 {
   width: 350px;
   padding: 5%;
   border: 1px solid #FFA500; 
@@ -772,13 +772,13 @@ h2 {
 }
 
 /* Título */
-.editarperfil h2 {
+.formulario1 h2 {
   margin-bottom: 20px;
   color: #000;
 }
 
 /* Labels */
-.editarperfil label {
+.formulario1 label {
   display: block;
   text-align: left;
   margin-bottom: 5px;
@@ -787,8 +787,8 @@ h2 {
 }
 
 /* Inputs y select */
-.editarperfil input,
-.editarperfil select {
+.formulario1 input,
+.formulario1 select {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -799,7 +799,7 @@ h2 {
 }
 
 /* Botón principal */
-.editarperfil button {
+.formulario1 button {
   width: 100%;
   padding: 10px;
   background-color: #8BC34A; 
@@ -809,14 +809,15 @@ h2 {
   font-size: 16px;
   cursor: pointer;
   font-weight: bold;
+  margin-bottom: 3%;
 }
 
-.editarperfil button:hover {
+.formulario1 button:hover {
   background-color: #7CB342; 
 }
 
 /* Botón secundario (cancelar) */
-.editarperfil .btn-secundario {
+.formulario1 .btn-secundario {
   display: block;
   margin-top: 10px;
   background-color: #FFA500; 
@@ -827,8 +828,11 @@ h2 {
   font-weight: bold;
 }
 
-.editarperfil .btn-secundario:hover {
+.formulario1 .btn-secundario:hover {
   background-color: #e69500;
+}
+.formulario1 img{
+  width: 40%;
 }
 
 /* Responsive */
@@ -1079,7 +1083,7 @@ h2 {
 .card.bloqueada {
   position: relative;
   overflow: hidden;
-  pointer-events: none; /* 🔒 evita clics en los botones */
+  pointer-events: none; /* evita clics en los botones */
   opacity: 0.9;
 }
 
@@ -1121,7 +1125,7 @@ h2 {
 
 .chat-box div img {
   width: 8%;
-margin-top: 1%;
+  margin-top: 1%;
 }
 
 

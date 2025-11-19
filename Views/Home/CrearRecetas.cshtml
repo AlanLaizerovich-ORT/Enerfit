@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "CrearRecetas";
+}
+
+<h2>Crear receta</h2>
+
+<form method="post">
+    <label>Nombre:</label>
+    <input type="text" name="nombreReceta" class="form-control" required />
+
+    <label>Calorías:</label>
+    <input type="number" name="Calorias" class="form-control" />
+
+    <label>Proteínas:</label>
+    <input type="number" name="Proteinas" class="form-control" />
+
+    <label>Carbohidratos:</label>
+    <input type="number" name="Carbohidratos" class="form-control" />
+
+    <label>Ingredientes:</label>
+    <textarea name="Ingredientes" class="form-control" placeholder="Ej: Pollo, arroz, aceite de oliva…"></textarea>
+
+    <button type="submit" class="btn btn-primary mt-3">Guardar</button>
+</form>
