@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YhW+23j8IkNXp/Dqfwe+ofXjys7F9VA+Vz7oYxPO4WE=",
+  "Hash": "1XY/ZGiEtbnOqLcl/g1owlxmxSkuw2RfAtv9IUILKOc=",
   "Source": "Enerfit-Proyecto",
   "BasePath": "_content/Enerfit-Proyecto",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Enerfit-Proyecto\\wwwroot",
       "Source": "Enerfit-Proyecto",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\css\\site.css",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\favicon.ico",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\2309082.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\2309082.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/2309082.png",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\2309082.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\4760544-removebg-preview.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\4760544-removebg-preview.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/4760544-removebg-preview.png",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\4760544-removebg-preview.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\5850570-removebg-preview.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\5850570-removebg-preview.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/5850570-removebg-preview.png",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\5850570-removebg-preview.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\abdomen.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\abdomen.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/abdomen.png",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\abdomen.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Alimentacion.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Alimentacion.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Alimentacion.png",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Alimentacion.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\bicep.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\bicep.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/bicep.png",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\bicep.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\calcu.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\calcu.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/calcu.png",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\calcu.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\CrunchMaquina.gif",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\CrunchMaquina.gif",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/CrunchMaquina.gif",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\CrunchMaquina.gif"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\CrunchSuperior.gif",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\CrunchSuperior.gif",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/CrunchSuperior.gif",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\CrunchSuperior.gif"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\CurlBicep.gif",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\CurlBicep.gif",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/CurlBicep.gif",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\CurlBicep.gif"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\CurlConcentrado.gif",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\CurlConcentrado.gif",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/CurlConcentrado.gif",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\CurlConcentrado.gif"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\CurlFemoral.gif",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\CurlFemoral.gif",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/CurlFemoral.gif",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\CurlFemoral.gif"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\CurlMartillo.gif",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\CurlMartillo.gif",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/CurlMartillo.gif",
       "AssetKind": "All",
@@ -302,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\CurlMartillo.gif"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Deficit.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Deficit.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Deficit.png",
       "AssetKind": "All",
@@ -321,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Deficit.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Entrrenamiento.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Entrrenamiento.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Entrrenamiento.png",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Entrrenamiento.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\ExtensionDeCuadriceps.gif",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\ExtensionDeCuadriceps.gif",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/ExtensionDeCuadriceps.gif",
       "AssetKind": "All",
@@ -359,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\ExtensionDeCuadriceps.gif"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\extensionesDepie.gif",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\extensionesDepie.gif",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/extensionesDepie.gif",
       "AssetKind": "All",
@@ -378,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\extensionesDepie.gif"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\ExtensionTricepPolea.gif",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\ExtensionTricepPolea.gif",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/ExtensionTricepPolea.gif",
       "AssetKind": "All",
@@ -397,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\ExtensionTricepPolea.gif"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Face.jfif",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Face.jfif",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Face.jfif",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Face.jfif"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Fitty.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Fitty.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Fitty.png",
       "AssetKind": "All",
@@ -435,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Fitty.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Flexiones.gif",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Flexiones.gif",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Flexiones.gif",
       "AssetKind": "All",
@@ -454,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Flexiones.gif"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Foro.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Foro.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Foro.png",
       "AssetKind": "All",
@@ -473,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Foro.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Grupos.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Grupos.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Grupos.png",
       "AssetKind": "All",
@@ -492,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Grupos.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Guardados.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Guardados.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Guardados.png",
       "AssetKind": "All",
@@ -511,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Guardados.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Historial.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Historial.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Historial.png",
       "AssetKind": "All",
@@ -530,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Historial.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\hombro.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\hombro.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/hombro.png",
       "AssetKind": "All",
@@ -549,10 +549,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\hombro.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Info.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Info.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Info.png",
       "AssetKind": "All",
@@ -568,10 +568,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Info.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Insta.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Insta.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Insta.png",
       "AssetKind": "All",
@@ -587,10 +587,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Insta.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Landing1.jpg",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Landing1.jpg",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Landing1.jpg",
       "AssetKind": "All",
@@ -606,10 +606,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Landing1.jpg"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Landing2.jpg",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Landing2.jpg",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Landing2.jpg",
       "AssetKind": "All",
@@ -625,10 +625,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Landing2.jpg"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Landing3.jpg",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Landing3.jpg",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Landing3.jpg",
       "AssetKind": "All",
@@ -644,10 +644,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Landing3.jpg"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Logo.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Logo.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Logo.png",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Logo.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Pecho.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Pecho.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Pecho.png",
       "AssetKind": "All",
@@ -682,10 +682,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Pecho.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Perfil.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Perfil.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Perfil.png",
       "AssetKind": "All",
@@ -701,10 +701,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Perfil.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Pierna.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Pierna.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Pierna.png",
       "AssetKind": "All",
@@ -720,10 +720,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Pierna.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Plan por obj.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Plan por obj.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Plan por obj.png",
       "AssetKind": "All",
@@ -739,10 +739,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Plan por obj.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Plancha.gif",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Plancha.gif",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Plancha.gif",
       "AssetKind": "All",
@@ -758,10 +758,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Plancha.gif"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Pressbanca.jfif",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Pressbanca.jfif",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Pressbanca.jfif",
       "AssetKind": "All",
@@ -777,10 +777,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Pressbanca.jfif"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\PressFrances.gif",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\PressFrances.gif",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/PressFrances.gif",
       "AssetKind": "All",
@@ -796,10 +796,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\PressFrances.gif"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Pressmilitar.gif",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Pressmilitar.gif",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Pressmilitar.gif",
       "AssetKind": "All",
@@ -815,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Pressmilitar.gif"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Pressmilitar.jfif",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Pressmilitar.jfif",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Pressmilitar.jfif",
       "AssetKind": "All",
@@ -834,10 +834,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Pressmilitar.jfif"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Pullover.gif",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Pullover.gif",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Pullover.gif",
       "AssetKind": "All",
@@ -853,10 +853,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Pullover.gif"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Recetas.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Recetas.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Recetas.png",
       "AssetKind": "All",
@@ -872,10 +872,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Recetas.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\RutinaPorZona.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\RutinaPorZona.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/RutinaPorZona.png",
       "AssetKind": "All",
@@ -891,10 +891,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\RutinaPorZona.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\RutinasPerso.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\RutinasPerso.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/RutinasPerso.png",
       "AssetKind": "All",
@@ -910,10 +910,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\RutinasPerso.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Sentadilla.gif",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Sentadilla.gif",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Sentadilla.gif",
       "AssetKind": "All",
@@ -929,10 +929,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Sentadilla.gif"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\tricep.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\tricep.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/tricep.png",
       "AssetKind": "All",
@@ -948,10 +948,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\tricep.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Trofeo.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Trofeo.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Trofeo.png",
       "AssetKind": "All",
@@ -967,10 +967,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Trofeo.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Videos.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Videos.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Videos.png",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Videos.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\Volumen.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\Volumen.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/Volumen.png",
       "AssetKind": "All",
@@ -1005,10 +1005,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\Volumen.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\VuelosLaterales.jpg",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\VuelosLaterales.jpg",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/VuelosLaterales.jpg",
       "AssetKind": "All",
@@ -1024,10 +1024,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\VuelosLaterales.jpg"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\VuelosVerticales.gif",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\VuelosVerticales.gif",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/VuelosVerticales.gif",
       "AssetKind": "All",
@@ -1043,10 +1043,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\VuelosVerticales.gif"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\Imagenes\\X.png",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\Imagenes\\X.png",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "Imagenes/X.png",
       "AssetKind": "All",
@@ -1062,10 +1062,10 @@
       "OriginalItemSpec": "wwwroot\\Imagenes\\X.png"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\js\\site.js",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -1081,10 +1081,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\js\\validaciones.js",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\js\\validaciones.js",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "js/validaciones.js",
       "AssetKind": "All",
@@ -1100,10 +1100,10 @@
       "OriginalItemSpec": "wwwroot\\js\\validaciones.js"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -1119,10 +1119,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -1138,10 +1138,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -1157,10 +1157,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -1176,10 +1176,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -1195,10 +1195,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -1214,10 +1214,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -1233,10 +1233,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -1252,10 +1252,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -1271,10 +1271,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -1290,10 +1290,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "Enerfit-Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49518922\\Downloads\\1\\Enerfit-2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\49518922\\Downloads\\Enerfit\\wwwroot\\",
       "BasePath": "_content/Enerfit-Proyecto",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",

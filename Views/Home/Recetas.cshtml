@@ -1,0 +1,40 @@
+@{
+    ViewData["Title"] = "Recetas";
+}
+
+<h1 class="titulo">Recetas saludables</h1>
+
+<div class="acciones-superiores">
+    <a href="/Home/CrearReceta" class="btn btn-primary">Crear nueva receta</a>
+</div>
+
+<table class="tabla">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var r in Model)
+        {
+            <tr>
+                <td>@r.Titulo</td>
+
+                <td class="acciones">
+                    <a href="/Home/VerReceta/@r.IdRecetas" class="btn btn-info">Ver</a>
+                    <a href="/Home/EditarReceta/@r.IdRecetas" class="btn btn-warning">Editar</a>
+                    <a href="/Home/BorrarReceta/@r.IdRecetas" class="btn btn-danger">Borrar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    .titulo { text-align:center; margin-bottom:20px; }
+    .tabla { width:100%; border-collapse:collapse; margin-top:20px; }
+    .tabla th, .tabla td { padding:12px; border-bottom:1px solid #ddd; }
+    .tabla th { background:#f2f2f2; }
+    .acciones a { margin-right:10px; }
+</style>

@@ -136,12 +136,12 @@ public static void CrearReceta(Recetas receta)
     using (SqlConnection connection = new SqlConnection(_connectionString))
     {
         string query = @"
-            INSERT INTO Recetas (nombreReceta, Calorias, Proteinas, Carbohidratos, Ingredientes)
+            INSERT INTO Recetas (nombre, Calorias, Proteinas, Carbohidratos, Ingredientes)
             VALUES (@pNombre, @pCalorias, @pProteinas, @pCarbohidratos, @pIngredientes)";
         
         connection.Execute(query, new 
         {
-            pNombre = receta.nombreReceta,
+            pNombre = receta.Titulo,
             pCalorias = receta.Calorias,
             pProteinas = receta.Proteinas,
             pCarbohidratos = receta.Carbohidratos,
@@ -165,7 +165,7 @@ public static void EditarReceta(Recetas receta)
 
         connection.Execute(query, new 
         {
-            pNombre = receta.nombreReceta,
+            pNombre = receta.Titulo,
             pCalorias = receta.Calorias,
             pProteinas = receta.Proteinas,
             pCarbohidratos = receta.Carbohidratos,

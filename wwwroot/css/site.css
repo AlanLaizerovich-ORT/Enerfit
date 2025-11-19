@@ -380,16 +380,40 @@ body {
   color: #000;
 }
 
-.card .buttons {
+.card .buttons, .musculo-card .buttons {
   display: flex;
   justify-content: center;
   gap: 10px;
+}
+.Novedades .buttons{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.Novedades button{
+  padding: 8px 15px;
+  border: none;
+  background-color: #FFA500;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .card button {
   padding: 8px 15px;
   border: none;
   background-color: #39A45B;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.musculo-card button{
+  padding: 8px 15px;
+  border: none;
+  background-color: #FFA500;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -409,7 +433,6 @@ section {
 }
 
 section div {
-  background-color: #ffe9b8; 
   border-radius: 10px 10px 10px 10px;       
   padding: 7%;       
   text-align: center;

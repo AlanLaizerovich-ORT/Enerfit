@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "Ver receta";
+}
+
+@if (Model == null)
+{
+    <h2 style="color:red;">Error: la receta no existe.</h2>
+    <a href="/Home/Recetas" class="btn btn-secondary">Volver</a>
+}
+else
+{
+    <h1>@Model.Titulo</h1>
+
+    <p><strong>Categoría:</strong> @Model.Categoria</p>
+
+    <h3>Ingredientes</h3>
+    <p>@Html.Raw((Model.Ingredientes ?? "").Replace("\n", "<br />"))</p>
+
+    <h3>Preparación</h3>
+    <p>@Html.Raw((Model.Preparacion ?? "").Replace("\n", "<br />"))</p>
+
+    <div class="botones">
+        <a href="/Home/EditarReceta/@Model.Id" class="btn btn-warning">Editar</a>
+        <a href="/Home/BorrarReceta/@Model.Id" class="btn btn-danger">Borrar</a>
+        <a href="/Home/Recetas" class="btn btn-secondary">Volver</a>
+    </div>
+}
+
+<style>
+    .botones a { margin-right:12px; }
+</style>

@@ -60,7 +60,7 @@ public IActionResult IniciarSesion(string nombreUsuario, string contrasenia)
         public IActionResult IrARegistro() => RedirectToAction("Registro");
 
         [HttpGet]
-        public IActionResult Registro() => View();
+      
 
         [HttpPost]
         [HttpPost]
@@ -123,7 +123,7 @@ public IActionResult Registro(string nombreUsuario, string contrasenia, string n
         public IActionResult CrearPlanEntrenamiento() => ValidarSesion(View());
         public IActionResult CrearPlanAlimentacion() => ValidarSesion(View());
         public IActionResult Tutorial() => ValidarSesion(View());
-        public IActionResult CrearRecetas() => ValidarSesion(View());
+       
 
         public IActionResult Perfil()
         {
@@ -304,19 +304,27 @@ public IActionResult EditarPerfil(Perfil perfilActualizado)
     // ======== DEFAULT ========
     return ("No entendí eso 😅. Podés hablarme de *entrenamiento*, *rutinas* o *alimentación*.", null);
 }
+// =======================
+//     LISTA DE RECETAS
+// =======================
+[HttpGet]
 public IActionResult Recetas()
 {
     if (HttpContext.Session.GetInt32("UsuarioID") == null)
         return RedirectToAction("InicioSesion");
 
     var recetas = BD.ObtenerRecetas();
-    return View(recetas); // SOLO muestra la lista
+    return View("Recetas", recetas); 
 }
 
 // =======================
 //     CREAR RECETA
 // =======================
-
+[HttpGet]
+public IActionResult CrearReceta()
+{
+    return ValidarSesion(View());
+}
 
 [HttpPost]
 public IActionResult CrearReceta(Recetas receta)
@@ -326,7 +334,7 @@ public IActionResult CrearReceta(Recetas receta)
 }
 
 // =======================
-//     VER / EDITAR
+//     VER UNA RECETA
 // =======================
 [HttpGet]
 public IActionResult VerReceta(int id)
@@ -335,11 +343,12 @@ public IActionResult VerReceta(int id)
         return RedirectToAction("InicioSesion");
 
     var receta = BD.ObtenerRecetaPorId(id);
-
-    // SOLO se muestra cuando tocás el botón "Ver"
-    return View("VerReceta", receta);
+    return View("VerReceta", receta); 
 }
 
+// =======================
+//     EDITAR RECETA
+// =======================
 [HttpGet]
 public IActionResult EditarReceta(int id)
 {
@@ -347,8 +356,6 @@ public IActionResult EditarReceta(int id)
         return RedirectToAction("InicioSesion");
 
     var receta = BD.ObtenerRecetaPorId(id);
-
-    // SOLO cuando tocás "Editar"
     return View("EditarReceta", receta);
 }
 
@@ -367,7 +374,10 @@ public IActionResult BorrarReceta(int id)
     BD.BorrarReceta(id);
     return RedirectToAction("Recetas");
 }
-
+public IActionResult VerRecetas()
+{
+    return RedirectToAction("Recetas");
+}
     }
     
 }
