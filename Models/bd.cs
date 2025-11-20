@@ -113,67 +113,84 @@ public static bool ExisteNombreUsuario(string nombreUsuario)
 }
 // ===================== RECETAS ======================
 
-public static List<Recetas> ObtenerRecetas()
+
+
+public static Recetas ObtenerReceta(int id)
 {
     using (SqlConnection connection = new SqlConnection(_connectionString))
     {
-        string query = "SELECT * FROM Recetas";
-        return connection.Query<Recetas>(query).ToList();
+        string sql = @"
+            SELECT IDRecetas, Titulo, calorias, proteinas, carbohidratos, ingredientes
+            FROM Recetas
+            WHERE IDRecetas = @id
+        ";
+
+        return connection.QueryFirstOrDefault<Recetas>(sql, new { id });
     }
 }
 
-public static Recetas ObtenerRecetaPorId(int id)
-{
-    using (SqlConnection connection = new SqlConnection(_connectionString))
-    {
-        string query = "SELECT * FROM Recetas WHERE IdRecetas = @pId";
-        return connection.QueryFirstOrDefault<Recetas>(query, new { pId = id });
-    }
-}
 
-public static void CrearReceta(Recetas receta)
+
+
+public static int CrearReceta(Recetas receta)
 {
     using (SqlConnection connection = new SqlConnection(_connectionString))
     {
-        string query = @"
-            INSERT INTO Recetas (nombre, Calorias, Proteinas, Carbohidratos, Ingredientes)
-            VALUES (@pNombre, @pCalorias, @pProteinas, @pCarbohidratos, @pIngredientes)";
-        
-        connection.Execute(query, new 
+        string insertQuery = @"
+            INSERT INTO Recetas (Titulo, calorias, proteinas, carbohidratos, ingredientes)
+            VALUES (@pTitulo, @pCalorias, @pProteinas, @pCarbohidratos, @pIngredientes);
+
+            SELECT IDRecetas FROM Recetas
+            WHERE Titulo = @pTitulo AND ingredientes = @pIngredientes;
+        ";
+
+        int nuevoID = connection.QuerySingle<int>(insertQuery, new
         {
-            pNombre = receta.Titulo,
-            pCalorias = receta.Calorias,
-            pProteinas = receta.Proteinas,
-            pCarbohidratos = receta.Carbohidratos,
-            pIngredientes = receta.Ingredientes
+            pTitulo = receta.Titulo,  // Cambiado a Titulo
+            pCalorias = receta.calorias,
+            pProteinas = receta.proteinas,
+            pCarbohidratos = receta.carbohidratos,
+            pIngredientes = receta.ingredientes
         });
+
+        return nuevoID;
     }
 }
+
+
+
+
+
+
 
 public static void EditarReceta(Recetas receta)
 {
     using (SqlConnection connection = new SqlConnection(_connectionString))
     {
-        string query = @"
-            UPDATE Recetas
-            SET nombreReceta = @pNombre,
-                Calorias = @pCalorias,
-                Proteinas = @pProteinas,
-                Carbohidratos = @pCarbohidratos,
-                IdIngredientes = @pIdIngredientes
-            WHERE IdRecetas = @pIdRecetas";
+       string query = @"
+    UPDATE Recetas
+    SET Titulo = @pTitulo,
+        calorias = @pCalorias,
+        proteinas = @pProteinas,
+        carbohidratos = @pCarbohidratos,
+        ingredientes = @pIngredientes
+    WHERE IDRecetas = @pID;
+";
+
 
         connection.Execute(query, new 
         {
-            pNombre = receta.Titulo,
-            pCalorias = receta.Calorias,
-            pProteinas = receta.Proteinas,
-            pCarbohidratos = receta.Carbohidratos,
-            pIdIngredientes = receta.IdIngredientes,
-            pIdRecetas = receta.IdRecetas
+            t = receta.Titulo,
+            pCalorias = receta.calorias,
+            pProteinas = receta.proteinas,
+            pCarbohidratos = receta.carbohidratos,
+            pIngredientes = receta.ingredientes,
+            pID = receta.IDRecetas
         });
     }
 }
+
+
 
 public static void BorrarReceta(int id)
 {

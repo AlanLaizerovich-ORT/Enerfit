@@ -1,3 +1,5 @@
+
+
 @{
     ViewData["Title"] = "Ver receta";
 }
@@ -16,12 +18,11 @@ else
     <h3>Ingredientes</h3>
     <p>@Html.Raw((Model.Ingredientes ?? "").Replace("\n", "<br />"))</p>
 
-    <h3>Preparación</h3>
-    <p>@Html.Raw((Model.Preparacion ?? "").Replace("\n", "<br />"))</p>
+  
 
     <div class="botones">
-        <a href="/Home/EditarReceta/@Model.Id" class="btn btn-warning">Editar</a>
-        <a href="/Home/BorrarReceta/@Model.Id" class="btn btn-danger">Borrar</a>
+        <a href="/Home/EditarReceta/@Model.IdRecetas" class="btn btn-warning">Editar</a>
+        <a href="/Home/BorrarReceta/@Model.IdRecetas" class="btn btn-danger">Borrar</a>
         <a href="/Home/Recetas" class="btn btn-secondary">Volver</a>
     </div>
 }

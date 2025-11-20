@@ -850,10 +850,13 @@ h2 {
   justify-content: center;
   align-items: center;
   min-height: 90vh; 
+  width: 100%;
+  height: auto;
 }
 
 .perfil-card {
-  width: 30%;
+  width: 50%;
+  height: auto;
   background-color: #ffe9b3;
   border: 1px solid #b3ffb3;
   border-radius: 10px;
@@ -867,9 +870,10 @@ h2 {
   margin-bottom: 1rem;
 }
 
-.perfil-datos {
+.perfil-datos, p {
   text-align: left;
   margin-left: 1.5rem;
+  font-size: larger;
 }
 .perfil-botones a {
   display: block;

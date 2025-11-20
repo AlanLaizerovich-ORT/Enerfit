@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gmOJQjvRAR1U9OVe5KMJjhBCxIZ/9+EQ0jEhNpscs37ciepktJtK9fvJdNa9vUyka8MOFATLmU2+0+mtS1PZ9w==",
+  "dgSpecHash": "aky+1WBtGLxcbTvDe2hXlxjnsICmHv6EgkKwfIIQcCwIzmpf3XF7MDOmaT5MPUATxwVAAPT9END4101Rqd4ozg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\49518922\\Downloads\\Enerfit\\Enerfit-Proyecto.csproj",
+  "projectFilePath": "C:\\Users\\49518922\\Downloads\\1\\Enerfit\\Enerfit-Proyecto.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\49518922\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\49518922\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",

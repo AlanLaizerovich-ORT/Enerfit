@@ -3,36 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>  HealthBot - Enerfit</title>
+    <title>HealthBot - Enerfit</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
 
+    <style>
+        /* Asegura que el chat tenga scroll */
+        .chat-box {
+            height: 450px;
+            overflow-y: auto;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
 
     <div class="chatbot-wrapper">
         <div class="chatbot-container">
+
             <header>
-                <h2> HealthBot <span>Enerfit</span>    <a href="/Home/Tutorial"><img src="/Imagenes/Info.png" alt=""></a></h2>
-                
+                <h2>
+                    HealthBot <span>Enerfit</span>
+                    <a href="/Home/Tutorial"><img src="/Imagenes/Info.png" alt=""></a>
+                </h2>
             </header>
 
+            <!-- 🔥 CONTENEDOR DEL CHAT (necesario para que responda) -->
             <div id="chat-box" class="chat-box">
+
+                <!-- 🔥 MENSAJE INICIAL DEL BOT -->
                 <div class="message bot-message">
-                    <div class="avatar bot-avatar"><img src="" alt=""></div>
-                    <div class="bubble"><img src="/Imagenes/Fitty.png" alt="">¡Hola! Soy tu asistente Fitty. ¿Cómo puedo ayudarte hoy?</div>
+                    <div class="avatar bot-avatar">
+                        <img src="/Imagenes/Fitty.png" alt="">
+                    </div>
+
+                    <div class="bubble">
+                        Hola, soy Fitty. Decime qué querés hacer:<br><br>
+
+                        1) Entrenamiento<br>
+                        2) Alimentación<br>
+                        3) Planes por objetivo<br>
+                        4) Crear rutina o dieta<br>
+                        5) Perfil<br>
+                        6) Videos<br>
+                        7) Bienestar y descanso<br>
+                        8) Tutorial del asistente<br>
+                        0) Nada por ahora<br><br>
+
+                        Podés escribir el número o la palabra clave.
+                    </div>
                 </div>
+
             </div>
 
+            <!-- ===================== INPUT ===================== -->
             <div class="input-area">
                 <input type="text" id="userMessage" placeholder="Escribí tu mensaje...">
                 <button id="sendBtn">Enviar</button>
             </div>
-         
+
         </div>
     </div>
 
+
+    <!-- ===================== JS ===================== -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script>
+
         $("#sendBtn").click(function () {
             sendMessage();
         });
@@ -42,54 +80,65 @@
         });
 
         function sendMessage() {
-    var userMessage = $("#userMessage").val().trim();
-    if (userMessage === "") return;
 
-    // Mostrar mensaje del usuario
-    $("#chat-box").append(`
-        <div class="message user-message">
-            <div class="bubble">${userMessage}</div>
-            <div class="avatar user-avatar">🧍‍♂️</div>
-        </div>
-    `);
-    $("#userMessage").val("");
-    $("#chat-box").scrollTop($("#chat-box")[0].scrollHeight);
+            var userMessage = $("#userMessage").val().trim();
+            if (userMessage === "") return;
 
-    //  Llamada AJAX al controlador
-    $.ajax({
-        type: "POST",
-        url: "/Home/GetResponse",
-        data: { userMessage: userMessage },
-        success: function (data) {
-            // Mostrar respuesta del bot
+
+            // 🔵 Mostrar mensaje del usuario
             $("#chat-box").append(`
-                <div class="message bot-message">
-                    <div class="avatar bot-avatar"><img src="/Imagenes/Fitty.png" alt=""></div>
-                    <div class="bubble">${data.reply}</div>
+                <div class="message user-message">
+                    <div class="bubble">${userMessage}</div>
+                    <div class="avatar user-avatar">🧍‍♂️</div>
                 </div>
             `);
 
-            // Si el bot pide redirigir, lo hace luego de 2 segundos
-            if (data.redirect) {
-                setTimeout(() => {
-                    window.location.href = data.redirect;
-                }, 2000);
-            }
-
+            $("#userMessage").val("");
             $("#chat-box").scrollTop($("#chat-box")[0].scrollHeight);
-        },
-        error: function () {
-            $("#chat-box").append(`
-                <div class="message bot-message">
-                    <div class="avatar bot-avatar"><img src="/Imagenes/Fitty.png" alt=""></div>
-                    <div class="bubble">⚠️ Ocurrió un error al procesar tu mensaje.</div>
-                </div>
-            `);
+
+
+            // 🟢 AJAX al controlador
+            $.ajax({
+                type: "POST",
+                url: "/Home/GetResponse",
+                data: { userMessage: userMessage },
+
+                success: function (data) {
+
+                    // Respuesta del bot
+                    $("#chat-box").append(`
+                        <div class="message bot-message">
+                            <div class="avatar bot-avatar">
+                                <img src="/Imagenes/Fitty.png" alt="">
+                            </div>
+                            <div class="bubble">${data.reply}</div>
+                        </div>
+                    `);
+
+                    // Redirección si corresponde
+                    if (data.redirect) {
+                        setTimeout(() => {
+                            window.location.href = data.redirect;
+                        }, 2000);
+                    }
+
+                    $("#chat-box").scrollTop($("#chat-box")[0].scrollHeight);
+                },
+
+                error: function () {
+                    $("#chat-box").append(`
+                        <div class="message bot-message">
+                            <div class="avatar bot-avatar">
+                                <img src="/Imagenes/Fitty.png" alt="">
+                            </div>
+                            <div class="bubble">Ocurrió un error al procesar tu mensaje.</div>
+                        </div>
+                    `);
+                }
+            });
         }
-    });
-}
 
     </script>
-     
+
 </body>
 </html>

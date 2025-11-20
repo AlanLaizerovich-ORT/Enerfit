@@ -198,6 +198,56 @@ public IActionResult EditarPerfil(Perfil perfilActualizado)
         return ("No te entendí 😅. Probá escribirme algo más claro.", null);
 
     input = input.ToLower();
+    // ====== MENÚ PRINCIPAL ======
+if (input == "menu" || input == "inicio" || input == "empezar" || input == "opciones")
+{
+    string menu =
+        "Hola, soy Fitty. Decime qué querés hacer:\n\n" +
+        "1) Entrenamiento\n" +
+        "2) Alimentación\n" +
+        "3) Planes por objetivo\n" +
+        "4) Crear rutina o dieta\n" +
+        "5) Perfil\n" +
+        "6) Videos\n" +
+        "7) Bienestar y descanso\n" +
+        "8) Tutorial del asistente\n" +
+        "0) Nada por ahora\n\n" +
+        "Escribí el número o la palabra clave.";
+
+    return (menu, null);
+}
+// ====== OPCIONES POR NÚMERO ======
+switch (input)
+{
+    case "1":
+        return ("Te llevo a la sección de entrenamiento.", "/Home/Entrenamiento");
+
+    case "2":
+        return ("Ingresando a la sección de alimentación.", "/Home/Alimentacion");
+
+    case "3":
+        return ("Mostrando planes por objetivo.", "/Home/PlanesPorObjetivo1");
+
+    case "4":
+        return ("Decime si querés crear una rutina o una dieta.", null);
+
+    case "5":
+        return ("Abriendo tu perfil.", "/Home/Perfil");
+
+    case "6":
+        return ("Mostrando videos de ejercicios.", "/Home/Videos");
+
+    case "7":
+        return ("Podés consultarme sobre descanso, estrés o motivación.", null);
+
+    case "8":
+        return ("Abriendo el tutorial del asistente.", "/Home/Tutorial");
+
+    case "0":
+        return ("De acuerdo. Si necesitás algo, escribime de nuevo.", null);
+}
+
+
 
     // ======== SALUDOS ========
     if (input.Contains("hola") || input.Contains("buenas") || input.Contains("hey"))
@@ -306,14 +356,8 @@ public IActionResult EditarPerfil(Perfil perfilActualizado)
 //     LISTA DE RECETAS
 // =======================
 [HttpGet]
-public IActionResult Recetas()
-{
-    if (HttpContext.Session.GetInt32("UsuarioID") == null)
-        return RedirectToAction("InicioSesion");
+[HttpGet][HttpGet]
 
-    var recetas = BD.ObtenerRecetas();
-    return View("Recetas", recetas); 
-}
 
 // =======================
 //     CREAR RECETA
@@ -327,22 +371,30 @@ public IActionResult CrearReceta()
 [HttpPost]
 public IActionResult CrearReceta(Recetas receta)
 {
-    BD.CrearReceta(receta);
-    return RedirectToAction("Recetas");
+    int id = BD.CrearReceta(receta);
+return RedirectToAction("VerReceta", new { id = id });
 }
 
 // =======================
 //     VER UNA RECETA
 // =======================
 [HttpGet]
+[HttpGet]
 public IActionResult VerReceta(int id)
 {
-    if (HttpContext.Session.GetInt32("UsuarioID") == null)
-        return RedirectToAction("InicioSesion");
+    var receta = BD.ObtenerReceta(id);
 
-    var receta = BD.ObtenerRecetaPorId(id);
-    return View("VerReceta", receta); 
+    if (receta == null)
+    {
+        // Si no encuentra la receta, redirige de nuevo a la vista de Recetas
+        ViewBag.Error = "La receta no existe.";
+        return RedirectToAction("Recetas");
+    }
+
+    return View(receta);  // Aquí pasas el modelo correctamente
 }
+
+
 
 // =======================
 //     EDITAR RECETA
@@ -353,7 +405,7 @@ public IActionResult EditarReceta(int id)
     if (HttpContext.Session.GetInt32("UsuarioID") == null)
         return RedirectToAction("InicioSesion");
 
-    var receta = BD.ObtenerRecetaPorId(id);
+    var receta = BD.ObtenerReceta(id);
     return View("EditarReceta", receta);
 }
 

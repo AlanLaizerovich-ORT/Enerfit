@@ -1,13 +1,9 @@
-namespace Enerfit.Models;
-
-public class Recetas {
- public int IdRecetas { get; set; }
- public string Titulo    { get; set; }
- public int Calorias { get; set; }
- public int Proteinas { get; set; }
- public int Carbohidratos { get; set; }
-public string Ingredientes { get; set; }
-
-        public int IdIngredientes { get; set; }
-
+public class Recetas
+{
+    public int IDRecetas { get; set; }
+    public string Titulo { get; set; }
+    public int calorias { get; set; }
+    public int proteinas { get; set; }
+    public int carbohidratos { get; set; }
+    public string ingredientes { get; set; }
 }
