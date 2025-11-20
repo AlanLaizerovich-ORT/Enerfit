@@ -64,23 +64,18 @@ public IActionResult IniciarSesion(string nombreUsuario, string contrasenia)
 
         [HttpPost]
         [HttpPost]
+[HttpPost]
 public IActionResult Registro(string nombreUsuario, string contrasenia, string nombre, string apellido, string email, string sexo)
 {
-    if (BD.ExisteNombreUsuario(nombreUsuario))
+    if (string.IsNullOrEmpty(nombre))
     {
-        ViewBag.Error = "El nombre de usuario ya está en uso. Por favor elegí otro.";
+        ViewBag.Error = "El nombre es obligatorio.";
         return View();
     }
 
-
-    if (BD.ExisteEmail(email))
-    {
-        ViewBag.Error = "El email ya está registrado. Usá otro correo.";
-        return View();
-    }
     var nuevoUsuario = new Usuario
     {
-        Nombre = nombreUsuario,
+        Nombre = nombre,
         Contrasenia = contrasenia
     };
 
@@ -97,9 +92,10 @@ public IActionResult Registro(string nombreUsuario, string contrasenia, string n
 
     BD.AgregarPerfil(nuevoPerfil);
 
-    ViewBag.Mensaje = "Usuario registrado correctamente. Ahora podés iniciar sesión.";
+    ViewBag.Mensaje = "Usuario registrado correctamente.";
     return RedirectToAction("InicioSesion");
 }
+
 
         
 
@@ -123,6 +119,8 @@ public IActionResult Registro(string nombreUsuario, string contrasenia, string n
         public IActionResult CrearPlanEntrenamiento() => ValidarSesion(View());
         public IActionResult CrearPlanAlimentacion() => ValidarSesion(View());
         public IActionResult Tutorial() => ValidarSesion(View());
+        public IActionResult VerPlanPersonalizado() => ValidarSesion(View());
+            public IActionResult VerPlanEntrenamiento() => ValidarSesion(View());
        
 
         public IActionResult Perfil()
@@ -378,6 +376,15 @@ public IActionResult VerRecetas()
 {
     return RedirectToAction("Recetas");
 }
+[HttpGet]
+public IActionResult CalculadoraIMC()
+{
+    if (HttpContext.Session.GetInt32("UsuarioID") == null)
+        return RedirectToAction("InicioSesion");
+
+    return View();
+}
+
     }
     
 }

@@ -3,33 +3,20 @@
     ViewData["Title"] = "Registro";
 }
 <section class="registro">
-<form asp-controller="Home" asp-action="Registro" method="post">
-       <img src="/Imagenes/Logo.png" alt="Logo Enerfit" />
-    <label for="nombreUsuario">Nombre de usuario:</label>
-    <input type="text" id="nombreUsuario" name="nombreUsuario" />
-
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" />
-
-    <label for="apellido">Apellido:</label>
-    <input type="text" id="apellido" name="apellido" />
-
-    <label for="email">E-mail:</label>
-    <input type="email" id="email" name="email" />
-
-    <label for="Sexo">Genero:</label>
-    <select name="sexo" required>
-        <option value="">Seleccione</option>
+<form asp-action="Registro" method="post">
+    <img src="/Imagenes/Logo.png" alt="Logo Enerfit" />
+    <input type="text" name="nombreUsuario" placeholder="Usuario" required />
+    <input type="password" name="contrasenia" placeholder="Contraseña" required />
+    <input type="text" name="nombre" placeholder="Nombre" required />
+    <input type="text" name="apellido" placeholder="Apellido" />
+    <input type="email" name="email" placeholder="Email" required />
+    <select name="sexo">
         <option value="M">Masculino</option>
         <option value="F">Femenino</option>
-        <option value="Otro">Otro</option>
     </select>
-
-    <label for="contrasenia">Contraseña:</label>
-    <input type="password" id="contrasenia" name="contrasenia" />
-
     <button type="submit">Registrarse</button>
 </form>
+
 
 @if (ViewBag.Error != null)
 {

@@ -443,6 +443,7 @@ section div {
   gap: 15px;
   margin-top: 3%;
   margin-bottom: 3%;
+  
 }
 
 section div img {
@@ -894,7 +895,8 @@ h2 {
 }
 
 .perfil-botones {
-  margin-top: 4%;
+  margin-top: 6%;
+  margin-bottom: 4%;
 }
 .perfil-datos p{
   font-size: large;
@@ -910,78 +912,31 @@ h2 {
   border-bottom: 2px solid #f47b20;
 }
 
-
 .active-link {
   color: white !important;
   background-color: #f47b20;
   padding: 6px 14px;
   border-radius: 8px;
 }
-.Hombros div{
+
+.Ejercicios div{
   width: 30%;
   padding: 1%;
   margin-top: 8%;
   margin-bottom: 8%;
+  background-color: #ffeecb; 
+  border: 2px solid #91c788;
+  border-radius: 15px;
+  padding: 5%;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.Hombros img{
-  width: 20%;
+
+.Ejercicios img{
+  width: 40%;
   height: auto;
-  
-}
-.Pecho div{
-  width: 30%;
-  padding: 1%;
-  margin-top: 8%;
-  margin-bottom: 8%;
-}
-.Pecho img{
-  width: 20%;
-  height: auto;
-  
-}
-.Pierna div{
-  width: 30%;
-  padding: 1%;
-  margin-top: 8%;
-  margin-bottom: 8%;
-}
-.Pierna img{
-  width: 20%;
-  height: auto;
-  
-}
-.Bicep div{
-  width: 30%;
-  padding: 1%;
-  margin-top: 8%;
-  margin-bottom: 8%;
-}
-.Bicep img{
-  width: 20%;
-  height: auto;
-  
-}
-.Tricep div{
-  width: 30%;
-  padding: 1%;
-  margin-top: 8%;
-  margin-bottom: 8%;
-}
-.Tricep img{
-  width: 20%;
-  height: auto;
-  
-}
-.Abdomen div{
-  width: 30%;
-  padding: 1%;
-  margin-top: 8%;
-  margin-bottom: 8%;
-}
-.Abdomen img{
-  width: 20%;
-  height: auto;
-  
 }
 
 /* === TUTORIAL FITTY === */
@@ -1151,5 +1106,189 @@ h2 {
   margin-top: 1%;
 }
 
+/* Contenedor principal */
+.PlanObj {
+  display: flex; /* pone los hijos en fila */
+  justify-content: center; /* centra los cuadrados horizontalmente */
+  gap: 20px; /* espacio entre los cuadrados */
+  margin-top: 30px;
+}
 
+/* Cada cuadrado */
+.PlanObj > div {
+  background-color: #ffeecb;
+  width: 30%; /* ancho fijo */
+  height: auto; /* altura fija */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around; /* separa contenido verticalmente */
+  border-radius: 10px; /* bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* sombra suave */
+  padding: 3%;
+  transition: transform 0.2s, box-shadow 0.2s; /* animación hover */
+  margin-top: 5%;
+margin-bottom: 7%;
+}
+
+.PlanDefVol{
+  display: flex; /* pone los hijos en fila */
+  justify-content: center; /* centra los cuadrados horizontalmente */
+  gap: 20px; /* espacio entre los cuadrados */
+  margin-top: 30px;
+}
+
+.PlanDefVol > div 
+{
+  background-color: #ffeecb;
+  width: 30%; /* ancho fijo */
+  height: auto; /* altura fija */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around; /* separa contenido verticalmente */
+  border-radius: 10px; /* bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* sombra suave */
+  padding: 3%;
+  transition: transform 0.2s, box-shadow 0.2s; /* animación hover */
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+/* Imagen dentro del cuadrado */
+.PlanObj img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-left: 10%;
+}
+
+/* Título dentro del cuadrado */
+.PlanObj h5 {
+  margin: 3%;
+  font-size: large;
+}
+
+/* Botón */
+.PlanObj .buttons button {
+  background-color: orange; /* naranja medio para el botón */
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.PlanObj .buttons button:hover {
+  background-color: #FF8C3F; /* naranja más intenso al hover */
+}
+
+/* Efecto hover en el cuadrado */
+.PlanObj > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+.imc-container {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  margin-top: 5%;
+  background-color: #ffeecb;
+  border-radius: 30px 30px 30px 30px;
+}
+
+.inputs-and-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.inputs {
+  flex: 1;
+}
+
+.inputs label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 3%;
+}
+
+.inputs input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #ffb366;
+  border-radius: 8px;
+  background: white;
+}
+
+.buttons-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-left: 10%;
+}
+
+.buttons-box button {
+  background: #ff8c42;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+  margin-left: 20%;
+}
+
+.buttons-box button:hover {
+  transform: scale(1.05);
+}
+
+.limpiar {
+  background: #ffd2ab;
+  color: black;
+}
+
+.resultado-imc {
+  text-align: center;
+  font-size: 60px;
+  font-weight: 700;
+  margin: 40px 0 10px;
+  margin-bottom: 20%;
+  margin-top: 5%;
+}
+
+.resultado-imc span {
+  color: #ff8c42;
+}
+
+.rangos-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+  margin-bottom: 20%;
+  gap: 15px;
+}
+
+.rango-box {
+  flex: 1;
+  background: #ffeecb;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  border: 2px solid #ffb366;
+}
+
+.rango-box h4 {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.rango-box p {
+  margin: 0;
+}
 

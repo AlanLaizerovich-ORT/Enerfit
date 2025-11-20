@@ -1,0 +1,73 @@
+@{
+    ViewData["Title"] = "Calculadora IMC";
+}
+
+<div class="imc-container">
+
+    <div class="inputs-and-buttons">
+
+        <div class="inputs">
+            <label>Peso (kg)</label>
+            <input type="number" id="peso" step="0.1" />
+
+            <label>Altura (cm)</label>
+            <input type="number" id="altura" step="0.1" />
+        </div>
+
+        <div class="buttons-box">
+            <button id="btnCalcular">Calcular IMC</button>
+            <button id="btnLimpiar" class="limpiar">Limpiar</button>
+        </div>
+
+    </div>
+
+    <div class="resultado-imc">
+        <span id="resultadoIMC">—</span>
+    </div>
+
+    <div class="rangos-container">
+
+        <div class="rango-box">
+            <h4>< 18.5</h4>
+            <p>Bajo peso</p>
+        </div>
+
+        <div class="rango-box">
+            <h4>18.5 - 24.9</h4>
+            <p>Normal</p>
+        </div>
+
+        <div class="rango-box">
+            <h4>25 - 29.9</h4>
+            <p>Sobrepeso</p>
+        </div>
+
+        <div class="rango-box">
+            <h4>≥ 30</h4>
+            <p>Obesidad</p>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    document.getElementById("btnCalcular").addEventListener("click", function () {
+        let peso = parseFloat(document.getElementById("peso").value);
+        let altura = parseFloat(document.getElementById("altura").value) / 100;
+
+        if (!peso || !altura) {
+            document.getElementById("resultadoIMC").innerText = "—";
+            return;
+        }
+
+        let imc = peso / (altura * altura);
+        document.getElementById("resultadoIMC").innerText = imc.toFixed(1);
+    });
+
+    document.getElementById("btnLimpiar").addEventListener("click", function () {
+        document.getElementById("peso").value = "";
+        document.getElementById("altura").value = "";
+        document.getElementById("resultadoIMC").innerText = "—";
+    });
+</script>
