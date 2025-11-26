@@ -12,8 +12,7 @@
 else
 {
     <h1>@Model.Titulo</h1>
-
-    <p><strong>Categoría:</strong> @Model.Categoria</p>
+    
 
     <h3>Ingredientes</h3>
     <p>@Html.Raw((Model.Ingredientes ?? "").Replace("\n", "<br />"))</p>

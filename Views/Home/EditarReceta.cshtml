@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "EditarReceta";
+}
+
+<form method="post" asp-action="EditarReceta" class = "formulario1">
+
+    <label>Título:</label>
+    <input type="text" name="Titulo" class="form-control" value="@Model.Titulo" required />
+
+    <label>Calorías:</label>
+    <input type="number" name="calorias" class="form-control" value="@Model.calorias" />
+
+    <label>Proteínas:</label>
+    <input type="number" name="proteinas" class="form-control" value="@Model.proteinas" />
+
+    <label>Carbohidratos:</label>
+    <input type="number" name="carbohidratos" class="form-control" value="@Model.carbohidratos" />
+
+    <label>Ingredientes:</label>
+    <input type="text" name="Ingredientes" class="form-control" value="@Model.Ingredientes" />
+
+    <button type="submit" class="btn btn-primary mt-3">Guardar Cambios</button>
+    <a href="/Home/Recetas" class="btn btn-secondary mt-3">Cancelar</a>
+</form>

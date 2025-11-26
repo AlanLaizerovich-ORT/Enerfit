@@ -1,21 +1,73 @@
 @{
     ViewData["Title"] = "Deficit";
 }
- 
- <section class = "PlanDefVol">
-<div>
-    <h3>Plan 1</h3>
-   <p>Objetivo: Deficit</p>
-    <p>Mayoria vegetales </p>
+
+<section class="PlanDefVol">
+
+    <div onclick="openModal('clasicoModal')">
+        <h3>Déficit clásico</h3>
+        <p>Objetivo: bajar de peso de forma gradual sin pasar hambre</p>
+    </div>
+
+    <div onclick="openModal('carbosModal')">
+        <h3>Déficit bajo en carbos</h3>
+        <p>Objetivo: bajar de peso con comidas saciantes basadas en proteínas y verduras</p>
+    </div>
+
+    <div onclick="openModal('flexibleModal')">
+        <h3>Déficit flexible</h3>
+        <p>Objetivo: bajar de peso sin dejar de comer algo rico cada tanto</p>
+    </div>
+
+</section>
+
+<div id="clasicoModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('clasicoModal')">&times;</span>
+        <h2>Plan Déficit Clásico</h2>
+        <p>Desayuno: Avena (½ taza) con leche descremada, 1 banana, 1 cucharada de miel
+           Almuerzo: Pechuga de pollo a la plancha, 1 taza de arroz integral, Ensalada grande (tomate + lechuga + zanahoria)
+           Merienda: Yogur descremado, Un puñado chico de frutos secos (10–12 almendras)
+           Cena: Omelette de 2 huevos con espinaca y cebolla, 1 rodaja de pan integral</p>
+    </div>
 </div>
-<div >
-    <h3>Plan 2</h3>
-    <p>Objetivo: Deficit</p>
-    <p> Mayoria Carnes</p>
+
+<div id="carbosModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('carbosModal')">&times;</span>
+        <h2>Plan Bajo en Carbohidratos</h2>
+        <p>Desayuno: 2 huevos revueltos, 1 tostada integral, Café o té sin azúcar
+           Almuerzo: Carne magra (200 g), Mix de verduras salteadas (zucchini, morrón, brócoli)
+           Merienda: Licuado simple: leche descremada + ½ banana + 1 cucharada de avena
+           Cena: Ensalada grande: atún al agua + tomate + lechuga + huevo duro, 1 cucharadita de aceite de oliva</p>
+    </div>
 </div>
-<div>
-   <h3>Plan 3</h3>
-    <p>Objetivo: Deficit</p>
-    <p>Variado </p>
+
+<div id="flexibleModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('flexibleModal')">&times;</span>
+        <h2>Plan Déficit Flexible</h2>
+        <p>Desayuno: Licuado de frutas: leche + frutilla + banana, 1 tostada integral con queso untable
+           Almuerzo: Tacos caseros: Tortillas de maíz, Pollo, Vegetales, Salsa casera liviana
+           Merienda: Barra de cereal o frutas, Café con leche
+           Cena: Pescado al horno (merluza o salmón), Puré de calabaza, Ensalada verde
+           Permitido del día (20%): 1 chocolate chico o 1 galletita dulce o 1 porción muy pequeña de lo que quieras.</p>
+    </div>
 </div>
- </section>
+
+<script>
+    function openModal(id) {
+        document.getElementById(id).style.display = "block";
+    }
+
+    function closeModal(id) {
+        document.getElementById(id).style.display = "none";
+    }
+
+    // Cerrar el popup haciendo clic afuera
+    window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) {
+            event.target.style.display = "none";
+        }
+    }
+</script>

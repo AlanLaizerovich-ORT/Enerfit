@@ -121,6 +121,7 @@ public IActionResult Registro(string nombreUsuario, string contrasenia, string n
         public IActionResult Tutorial() => ValidarSesion(View());
         public IActionResult VerPlanPersonalizado() => ValidarSesion(View());
             public IActionResult VerPlanEntrenamiento() => ValidarSesion(View());
+                  public IActionResult EditarReceta() => ValidarSesion(View());
        
 
         public IActionResult Perfil()
@@ -436,6 +437,16 @@ public IActionResult CalculadoraIMC()
 
     return View();
 }
+[HttpGet]
+public IActionResult Recetas()
+{
+    if (HttpContext.Session.GetInt32("UsuarioID") == null)
+        return RedirectToAction("InicioSesion");
+
+    var recetas = BD.ObtenerRecetas();
+    return View(recetas);
+}
+
 
     }
     

@@ -1,21 +1,78 @@
 @{
     ViewData["Title"] = "Volumen";
 }
- 
- <section class="PlanDefVol">
-<div>
-    <h3>Plan 1</h3>
-   <p>Objetivo: Ganar volumen</p>
-    <p>Mayoria vegetales </p>
+
+<section class="PlanDefVol">
+
+    <div onclick="openModal('plan1Modal')">
+        <h3>Volumen clasico</h3>
+        <p>Objetivo: subir masa muscular de forma estable con comidas completas y balanceadas</p>
+    </div>
+
+    <div onclick="openModal('plan2Modal')">
+        <h3>Volumen Alto en Proteínas</h3>
+        <p>Objetivo: priorizar el músculo y preferir comidas más contundentes, centradas en carnes</p>
+    </div>
+
+    <div onclick="openModal('plan3Modal')">
+        <h3>Volumen Flexible</h3>
+        <p>Objetivo: subir masa sin restricciones duras y con margen para comidas ricas</p>
+    </div>
+
+</section>
+
+<!-- MODAL PLAN 1 -->
+<div id="plan1Modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('plan1Modal')">&times;</span>
+        <h2>Plan Volumen clasico</h2>
+        <p> Desayuno: Avena (1 taza) con leche entera, 1 banana, 2 cucharadas de mantequilla de maní
+            Almuerzo: Pechuga de pollo o muslo (250 g), Arroz blanco (2 tazas cocidas), Ensalada grande con aceite de oliva
+            Merienda: Yogur entero, Mix de frutos secos (20–25 unidades), 1 fruta (manzana o pera)
+            Cena: Omelette de 3 huevos con queso y vegetales, 2 rodajas de pan integral, 1 vaso de leche o jugo natural
+        </p>
+    </div>
 </div>
-<div>
-    <h3>Plan 2</h3>
-    <p>Objetivo: Ganar Volumen</p>
-    <p> Mayoria Carnes</p>
+
+<!-- MODAL PLAN 2 -->
+<div id="plan2Modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('plan2Modal')">&times;</span>
+        <h2>Plan Volumen Alto en Proteínas</h2>
+        <p> Desayuno: 3 huevos revueltos, 2 tostadas con queso, Café con leche entera
+            Almuerzo: Carne magra o pollo (300 g), Papas al horno o puré (2 porciones grandes), Verduras salteadas (morrón, brócoli, cebolla)
+            Merienda: Licuado proteico: leche entera + 1 banana + avena + 1 cucharada de miel
+            Cena: Ensalada grande con atún o carne picada, 1 cucharada de aceite de oliva extra, 1 porción de arroz o fideos
+        </p>
+    </div>
 </div>
-<div>
-   <h3>Plan 3</h3>
-    <p>Objetivo: Ganar Volumen</p>
-    <p>Variado </p>
+
+<!-- MODAL PLAN 3 -->
+<div id="plan3Modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('plan3Modal')">&times;</span>
+        <h2>Plan Volumen Flexible</h2>
+        <p> Desayuno: Smoothie alto en calorías: leche entera + banana + frutillas + avena, 1 tostada con queso untable o dulce
+            Almuerzo: Tacos caseros: Tortillas de maíz, Carne, pollo o cerdo, Vegetales, Salsa liviana
+            Merienda: Yogur + granola, Café con leche
+            Cena: Pescado o pollo al horno, Puré de papas o calabaza (porción grande), Ensalada verde
+            Permitido del día (20%): 1 heladito chico O un chocolate O una porción pequeña de tu comida favorita
+        </p>
+    </div>
 </div>
- </section>
+
+<script>
+    function openModal(id) {
+        document.getElementById(id).style.display = "block";
+    }
+
+    function closeModal(id) {
+        document.getElementById(id).style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) {
+            event.target.style.display = "none";
+        }
+    }
+</script>
