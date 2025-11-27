@@ -1,0 +1,45 @@
+@model Tema
+@{
+    ViewData["Title"] = "Tema: " ;
+    var respuestas = ViewBag.Respuestas as List<Respuestas>;
+}
+
+<h2>@Model.Titulo</h2>
+<p>@Model.Contenido</p>
+<small>Publicado el @Model.Fecha.ToString("dd/MM/yyyy HH:mm")</small>
+
+<hr />
+
+<h3>Respuestas</h3>
+
+@if (respuestas != null && respuestas.Count > 0)
+{
+    foreach (var r in respuestas)
+    {
+        <div class="card mb-2">
+            <div class="card-body">
+                <p>@r.Contenido</p>
+                <small>@r.Fecha.ToString("dd/MM/yyyy HH:mm")</small>
+            </div>
+        </div>
+    }
+}
+else
+{
+    <p>No hay respuestas aún. ¡Sé el primero en responder!</p>
+}
+
+<hr />
+
+<h4>Responder este tema</h4>
+<form method="post" action="/Home/CrearRespuesta">
+    <input type="hidden" name="idTema" value="@Model.Id" />
+
+    <textarea name="contenido" class="form-control" rows="4" required></textarea>
+
+    <br />
+    <button type="submit" class="btn btn-primary">Enviar respuesta</button>
+</form>
+
+<br />
+<a href="/Home/Foro" class="btn btn-secondary">Volver al foro</a>

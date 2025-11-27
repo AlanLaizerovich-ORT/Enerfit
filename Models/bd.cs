@@ -201,6 +201,75 @@ namespace Enerfit
                 connection.Execute(query, new { pId = id });
             }
         }
+        // ===================== FORO - TEMAS ======================
+
+public static List<Tema> ObtenerTemas()
+{
+    using (SqlConnection connection = new SqlConnection(_connectionString))
+    {
+        string sql = "SELECT * FROM Temas ORDER BY Fecha DESC";
+        return connection.Query<Tema>(sql).ToList();
+    }
+}
+
+public static Tema ObtenerTema(int idTema)
+{
+    using (SqlConnection connection = new SqlConnection(_connectionString))
+    {
+        string sql = "SELECT * FROM Temas WHERE Id = @pId";
+        return connection.QueryFirstOrDefault<Tema>(sql, new { pId = idTema });
+    }
+}
+
+public static int CrearTema(Tema t)
+{
+    using (SqlConnection connection = new SqlConnection(_connectionString))
+    {
+        string sql = @"
+            INSERT INTO Temas (UsuarioId, Titulo, Contenido, Fecha)
+            OUTPUT INSERTED.Id
+            VALUES (@pUsuarioId, @pTitulo, @pContenido, @pFecha)";
+
+        return connection.ExecuteScalar<int>(sql, new
+        {
+            pUsuarioId = t.UsuarioId,
+            pTitulo = t.Titulo,
+            pContenido = t.Contenido,
+            pFecha = t.Fecha
+        });
+    }
+}
+
+// ===================== FORO - RESPUESTAS ======================
+
+public static List<Respuestas> ObtenerRespuestas(int idTema)
+{
+    using (SqlConnection connection = new SqlConnection(_connectionString))
+    {
+        string sql = "SELECT * FROM Respuestas WHERE TemaId = @pId ORDER BY Fecha ASC";
+        return connection.Query<Respuestas>(sql, new { pId = idTema }).ToList();
+    }
+}
+
+public static void CrearRespuesta(Respuestas r)
+{
+    using (SqlConnection connection = new SqlConnection(_connectionString))
+    {
+        string sql = @"
+            INSERT INTO Respuestas (TemaId, UsuarioId, Contenido, Fecha)
+            VALUES (@pTemaId, @pUsuarioId, @pContenido, @pFecha)";
+
+        connection.Execute(sql, new
+        {
+            pTemaId = r.TemaId,
+            pUsuarioId = r.UsuarioId,
+            pContenido = r.Contenido,
+            pFecha = r.Fecha
+        });
+    }
+}
+
+        
 
     }
 }

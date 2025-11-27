@@ -15,9 +15,7 @@ else
     
 
     <h3>Ingredientes</h3>
-    <p>@Html.Raw((Model.Ingredientes ?? "").Replace("\n", "<br />"))</p>
-
-  
+    
 
     <div class="botones">
         <a href="/Home/EditarReceta/@Model.IdRecetas" class="btn btn-warning">Editar</a>

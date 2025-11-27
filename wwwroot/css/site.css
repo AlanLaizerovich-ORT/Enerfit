@@ -192,7 +192,6 @@ h5:hover {
   cursor: pointer;
 }
 
-/*Inicio de sesion*/
 body {
   font-family: Arial, sans-serif;
   background-color: #fff;
@@ -870,7 +869,7 @@ h2 {
   display: block;
   width: 30%;
   padding: 2%;
-  background-color: #FFA500; /* Naranja */
+  background-color: #FFA500;
   color: white;
   text-align: center;
   border-radius: 6px;
@@ -1022,11 +1021,6 @@ h2 {
   transform: scale(1.05);
   box-shadow: 0 6px 14px rgba(124, 179, 66, 0.5);
 }
-
-
-/* === Sección del botón de tutorial debajo del chatbot === */
-
-/* Proximamente */
 
 .card.bloqueada {
   position: relative;
@@ -1277,7 +1271,6 @@ margin-bottom: 7%;
   transform: scale(1.02);
 }
 
-/* Popup */
 .modal {
   display: none; 
   position: fixed;
@@ -1305,7 +1298,6 @@ margin-bottom: 7%;
   font-size: 25px;
   cursor: pointer;
 }
-/* ===== LISTA DE RECETAS ===== */
 
 .titulo {
   text-align: center;
@@ -1360,8 +1352,6 @@ margin-bottom: 7%;
 }
 
 
-/* ===== VER RECETA ===== */
-
 h1 {
   text-align: center;
   margin-top: 20px;
@@ -1386,8 +1376,6 @@ h3 {
   text-decoration: none;
 }
 
-
-/* ===== BOTONES ESTÁNDARES ===== */
 
 .btn {
   font-weight: bold;

@@ -95,11 +95,6 @@ public IActionResult Registro(string nombreUsuario, string contrasenia, string n
     ViewBag.Mensaje = "Usuario registrado correctamente.";
     return RedirectToAction("InicioSesion");
 }
-
-
-        
-
-      
         public IActionResult Alimentacion() => ValidarSesion(View());
         public IActionResult Entrenamiento() => ValidarSesion(View());
         public IActionResult PlanesPorObjetivo1() => ValidarSesion(View());
@@ -120,8 +115,8 @@ public IActionResult Registro(string nombreUsuario, string contrasenia, string n
         public IActionResult CrearPlanAlimentacion() => ValidarSesion(View());
         public IActionResult Tutorial() => ValidarSesion(View());
         public IActionResult VerPlanPersonalizado() => ValidarSesion(View());
-            public IActionResult VerPlanEntrenamiento() => ValidarSesion(View());
-                  public IActionResult EditarReceta() => ValidarSesion(View());
+        public IActionResult VerPlanEntrenamiento() => ValidarSesion(View());
+        public IActionResult EditarReceta() => ValidarSesion(View());
        
 
         public IActionResult Perfil()
@@ -149,8 +144,8 @@ public IActionResult Registro(string nombreUsuario, string contrasenia, string n
             return vista;
         }
         [HttpGet]
-public IActionResult EditarPerfil()
-{
+        public IActionResult EditarPerfil()
+        {
     int? idUsuario = HttpContext.Session.GetInt32("UsuarioID");
 
     if (idUsuario == null)
@@ -167,9 +162,9 @@ public IActionResult EditarPerfil()
     return View(perfil);
 }
 
-[HttpPost]
-public IActionResult EditarPerfil(Perfil perfilActualizado)
-{
+    [HttpPost]
+        public IActionResult EditarPerfil(Perfil perfilActualizado)
+    {
     int? idUsuario = HttpContext.Session.GetInt32("UsuarioID");
 
     if (idUsuario == null)
@@ -181,7 +176,7 @@ public IActionResult EditarPerfil(Perfil perfilActualizado)
 
     ViewBag.Mensaje = " Perfil actualizado correctamente.";
     return RedirectToAction("Perfil");
-}
+        }
 
 
 
@@ -194,63 +189,63 @@ public IActionResult EditarPerfil(Perfil perfilActualizado)
         }
 
        private (string reply, string redirect) GetBotResponse(string input)
-{
+        {
     if (string.IsNullOrWhiteSpace(input))
         return ("No te entendí 😅. Probá escribirme algo más claro.", null);
 
-    input = input.ToLower();
-    // ====== MENÚ PRINCIPAL ======
-if (input == "menu" || input == "inicio" || input == "empezar" || input == "opciones")
-{
-    string menu =
-        "Hola, soy Fitty. Decime qué querés hacer:\n\n" +
-        "1) Entrenamiento\n" +
-        "2) Alimentación\n" +
-        "3) Planes por objetivo\n" +
-        "4) Crear rutina o dieta\n" +
-        "5) Perfil\n" +
-        "6) Videos\n" +
-        "7) Bienestar y descanso\n" +
-        "8) Tutorial del asistente\n" +
-        "0) Nada por ahora\n\n" +
-        "Escribí el número o la palabra clave.";
+            input = input.ToLower();
+                    // ====== MENÚ PRINCIPAL ======
+            if (input == "menu" || input == "inicio" || input == "empezar" || input == "opciones")
+                {
+            string menu =
+                    "Hola, soy Fitty. Decime qué querés hacer:\n\n" +
+                    "1) Entrenamiento\n" +
+                    "2) Alimentación\n" +
+                    "3) Planes por objetivo\n" +
+                    "4) Crear rutina o dieta\n" +
+                    "5) Perfil\n" +
+                    "6) Videos\n" +
+                    "7) Bienestar y descanso\n" +
+                    "8) Tutorial del asistente\n" +
+                    "0) Nada por ahora\n\n" +
+                    "Escribí el número o la palabra clave.";
 
-    return (menu, null);
-}
-// ====== OPCIONES POR NÚMERO ======
-switch (input)
-{
-    case "1":
-        return ("Te llevo a la sección de entrenamiento.", "/Home/Entrenamiento");
+            return (menu, null);
+            }
+                // ====== OPCIONES POR NÚMERO ======
+            switch (input)
+                {
+                case "1":
+                    return ("Te llevo a la sección de entrenamiento.", "/Home/Entrenamiento");
 
-    case "2":
-        return ("Ingresando a la sección de alimentación.", "/Home/Alimentacion");
+                case "2":
+                     return ("Ingresando a la sección de alimentación.", "/Home/Alimentacion");
 
-    case "3":
-        return ("Mostrando planes por objetivo.", "/Home/PlanesPorObjetivo1");
+                case "3":
+                     return ("Mostrando planes por objetivo.", "/Home/PlanesPorObjetivo1");
 
-    case "4":
-        return ("Decime si querés crear una rutina o una dieta.", null);
+                case "4":
+                     return ("Decime si querés crear una rutina o una dieta.", null);
 
-    case "5":
-        return ("Abriendo tu perfil.", "/Home/Perfil");
+                case "5":
+                     return ("Abriendo tu perfil.", "/Home/Perfil");
 
-    case "6":
-        return ("Mostrando videos de ejercicios.", "/Home/Videos");
+                case "6":
+                     return ("Mostrando videos de ejercicios.", "/Home/Videos");
 
-    case "7":
-        return ("Podés consultarme sobre descanso, estrés o motivación.", null);
+                case "7":
+                     return ("Podés consultarme sobre descanso, estrés o motivación.", null);
 
-    case "8":
-        return ("Abriendo el tutorial del asistente.", "/Home/Tutorial");
+                case "8":
+                     return ("Abriendo el tutorial del asistente.", "/Home/Tutorial");
 
-    case "0":
-        return ("De acuerdo. Si necesitás algo, escribime de nuevo.", null);
-}
+                case "0":
+                     return ("De acuerdo. Si necesitás algo, escribime de nuevo.", null);
+            }
 
 
 
-    // ======== SALUDOS ========
+         // ======== SALUDOS ========
     if (input.Contains("hola") || input.Contains("buenas") || input.Contains("hey"))
         return ("¡Hola! Soy Fitty  ¿Querés hablar de *entrenamiento*, *rutinas* o *alimentación*?", null);
 
@@ -387,12 +382,12 @@ public IActionResult VerReceta(int id)
 
     if (receta == null)
     {
-        // Si no encuentra la receta, redirige de nuevo a la vista de Recetas
+        
         ViewBag.Error = "La receta no existe.";
         return RedirectToAction("Recetas");
     }
 
-    return View(receta);  // Aquí pasas el modelo correctamente
+    return View(receta);  
 }
 
 
@@ -417,9 +412,7 @@ public IActionResult EditarReceta(Recetas receta)
     return RedirectToAction("Recetas");
 }
 
-// =======================
-//     BORRAR
-// =======================
+
 public IActionResult BorrarReceta(int id)
 {
     BD.BorrarReceta(id);
@@ -445,6 +438,58 @@ public IActionResult Recetas()
 
     var recetas = BD.ObtenerRecetas();
     return View(recetas);
+}
+
+public IActionResult Foro()
+{
+    var temas = BD.ObtenerTemas();
+    return View(temas);
+}
+
+[HttpGet]
+public IActionResult CrearTema()
+{
+    return View();
+}
+
+[HttpPost]
+public IActionResult CrearTema(string titulo, string contenido)
+{
+    Tema t = new Tema()
+    {
+        Titulo = titulo,
+        Contenido = contenido,
+        UsuarioId = HttpContext.Session.GetInt32("UsuarioID") ?? 0,
+        Fecha = DateTime.Now
+    };
+
+    BD.CrearTema(t);
+    return RedirectToAction("Foro");
+}
+
+public IActionResult DetalleTema(int id)
+{
+    var tema = BD.ObtenerTema(id);
+    var respuestas = BD.ObtenerRespuestas(id);
+
+    ViewBag.Respuestas = respuestas;
+    return View(tema);
+}
+
+[HttpPost]
+public IActionResult CrearRespuesta(int idTema, string contenido)
+{
+    Respuestas r = new Respuestas()
+    {
+        TemaId = idTema,
+        Contenido = contenido,
+        UsuarioId = HttpContext.Session.GetInt32("UsuarioID") ?? 0,
+        Fecha = DateTime.Now
+    };
+
+    BD.CrearRespuesta(r);
+
+    return RedirectToAction("DetalleTema", new { id = idTema });
 }
 
 

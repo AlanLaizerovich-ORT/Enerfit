@@ -1,0 +1,17 @@
+@{
+    ViewData["Title"] = "Crear Tema";
+}
+
+<h2>Crear nuevo tema</h2>
+
+<form method="post" action="/Home/CrearTema">
+    <label>Título:</label>
+    <input type="text" name="titulo" class="form-control" required />
+
+    <label>Contenido:</label>
+    <textarea name="contenido" class="form-control" rows="5" required></textarea>
+
+    <br />
+    <button type="submit" class="btn btn-success">Publicar</button>
+    <a href="/Home/Foro" class="btn btn-secondary">Volver</a>
+</form>
