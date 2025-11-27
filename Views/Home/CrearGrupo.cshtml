@@ -1,0 +1,15 @@
+@model Enerfit.Models.Grupo
+@{
+    ViewData["Title"] = "CrearGrupo";
+}
+<h2>Crear Grupo</h2>
+
+<form method="post">
+    <label>Nombre:</label>
+    <input class="form-control" name="Nombre" required />
+
+    <label>Descripción:</label>
+    <textarea class="form-control" name="Descripcion" required></textarea>
+
+    <button class="btn btn-success mt-3">Crear</button>
+</form>

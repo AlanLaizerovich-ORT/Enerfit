@@ -1,45 +1,49 @@
 @model Tema
 @{
-    ViewData["Title"] = "Tema: " ;
+    ViewData["Title"] = "Tema";
     var respuestas = ViewBag.Respuestas as List<Respuestas>;
 }
 
-<h2>@Model.Titulo</h2>
-<p>@Model.Contenido</p>
-<small>Publicado el @Model.Fecha.ToString("dd/MM/yyyy HH:mm")</small>
+<h2 class="titulo">@Model.Titulo</h2>
 
-<hr />
+<div class="tema-detalle-container">
 
-<h3>Respuestas</h3>
+    <div class="tema-card">
+        <p>@Model.Contenido</p>
+        <small>Publicado el @Model.Fecha.ToString("dd/MM/yyyy HH:mm")</small>
+    </div>
 
-@if (respuestas != null && respuestas.Count > 0)
-{
-    foreach (var r in respuestas)
-    {
-        <div class="card mb-2">
-            <div class="card-body">
-                <p>@r.Contenido</p>
-                <small>@r.Fecha.ToString("dd/MM/yyyy HH:mm")</small>
-            </div>
-        </div>
-    }
-}
-else
-{
-    <p>No hay respuestas aún. ¡Sé el primero en responder!</p>
-}
+    <h3 class="subtitulo">Respuestas</h3>
 
-<hr />
+    <div class="respuestas-container">
+        @if (respuestas != null && respuestas.Count > 0)
+        {
+            foreach (var r in respuestas)
+            {
+                <div class="respuesta-card">
+                    <p>@r.Contenido</p>
+                    <small>@r.Fecha.ToString("dd/MM/yyyy HH:mm")</small>
+                </div>
+            }
+        }
+        else
+        {
+            <p class="sin-respuestas">No hay respuestas aún. ¡Sé el primero en responder!</p>
+        }
+    </div>
 
-<h4>Responder este tema</h4>
-<form method="post" action="/Home/CrearRespuesta">
-    <input type="hidden" name="idTema" value="@Model.Id" />
+    <h4 class="subtitulo">Responder este tema</h4>
 
-    <textarea name="contenido" class="form-control" rows="4" required></textarea>
+    <form method="post" action="/Home/CrearRespuesta" class="respuesta-form">
+        <input type="hidden" name="idTema" value="@Model.Id" />
 
-    <br />
-    <button type="submit" class="btn btn-primary">Enviar respuesta</button>
-</form>
+        <textarea name="contenido" rows="4" required></textarea>
 
-<br />
-<a href="/Home/Foro" class="btn btn-secondary">Volver al foro</a>
+        <button type="submit" class="btn-primary">Enviar respuesta</button>
+    </form>
+
+    <div class="volver-container">
+        <a href="/Home/Foro" class="btn-secondary">Volver al foro</a>
+    </div>
+
+</div>

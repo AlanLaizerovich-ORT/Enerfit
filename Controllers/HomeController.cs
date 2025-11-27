@@ -8,14 +8,13 @@ namespace Enerfit.Controllers
     public class HomeController : Controller
     {
         [HttpGet]
-        public IActionResult Index()
-        {
-            if (HttpContext.Session.GetInt32("UsuarioID") == null)
-                return RedirectToAction("InicioSesion");
+       [HttpGet]
+public IActionResult Index()
+{
+    ViewBag.UsuarioNombre = HttpContext.Session.GetString("UsuarioNombre");
+    return View();
+}
 
-            ViewBag.UsuarioNombre = HttpContext.Session.GetString("UsuarioNombre");
-            return View();
-        }
 
       [HttpGet]
 public IActionResult InicioSesion()
@@ -491,6 +490,7 @@ public IActionResult CrearRespuesta(int idTema, string contenido)
 
     return RedirectToAction("DetalleTema", new { id = idTema });
 }
+
 
 
     }

@@ -4,15 +4,17 @@
     ViewData["Title"] = "Foro";
 }
 
-<h2>Foro de discusión</h2>
+<h2 class="titulo">Foro de discusión</h2>
 
-<a class="btn btn-primary mb-3" href="/Home/CrearTema">Crear nuevo tema</a>
+<div class="acciones-superiores">
+    <a href="/Home/CrearTema" class="btn-primary">Crear nuevo tema</a>
+</div>
 
-<div class="list-group">
+<div class="foro-container">
     @foreach (var t in Model)
     {
-        <a href="/Home/DetalleTema/@t.Id" class="list-group-item list-group-item-action">
-            <h4>@t.Titulo</h4>
+        <a href="/Home/DetalleTema/@t.Id" class="foro-card">
+            <h3>@t.Titulo</h3>
             <p>@t.Contenido.Substring(0, Math.Min(t.Contenido.Length, 120))...</p>
             <small>Publicado el @t.Fecha.ToString("dd/MM/yyyy HH:mm")</small>
         </a>

@@ -1,0 +1,24 @@
+@model List<Enerfit.Models.MensajeGrupo>
+
+<h2>Chat del Grupo</h2>
+
+<a href="/Home/Grupos" class="btn btn-secondary mb-3">Volver</a>
+
+<div class="border p-3" style="height:400px; overflow-y:auto;">
+    @foreach (var m in Model)
+    {
+        <div class="mb-2">
+            <strong>@m.UsuarioNombre</strong>
+            <small class="text-muted">@m.Fecha.ToString("dd/MM HH:mm")</small>
+            <p>@m.Texto</p>
+        </div>
+    }
+</div>
+
+<form method="post" action="/Home/EnviarMensaje">
+    <input type="hidden" name="idGrupo" value="@ViewBag.IdGrupo" />
+
+    <textarea name="texto" class="form-control mt-3" required></textarea>
+
+    <button class="btn btn-primary mt-2">Enviar</button>
+</form>
