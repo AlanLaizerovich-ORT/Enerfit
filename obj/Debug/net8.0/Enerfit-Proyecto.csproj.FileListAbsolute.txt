@@ -269,7 +269,6 @@ C:\Users\49518922\Downloads\1\Enerfit\bin\Debug\net8.0\System.Memory.Data.dll
 C:\Users\49518922\Downloads\1\Enerfit\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\49518922\Downloads\1\Enerfit\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\49518922\Downloads\1\Enerfit\bin\Debug\net8.0\System.Security.Cryptography.Xml.dll
-C:\Users\49518922\Downloads\1\Enerfit\bin\Debug\net8.0\System.Text.Json.dll
 C:\Users\49518922\Downloads\1\Enerfit\bin\Debug\net8.0\cs\Microsoft.Data.SqlClient.resources.dll
 C:\Users\49518922\Downloads\1\Enerfit\bin\Debug\net8.0\de\Microsoft.Data.SqlClient.resources.dll
 C:\Users\49518922\Downloads\1\Enerfit\bin\Debug\net8.0\es\Microsoft.Data.SqlClient.resources.dll
@@ -301,11 +300,6 @@ C:\Users\49518922\Downloads\1\Enerfit\obj\Debug\net8.0\Enerfit-Proyecto.RazorAss
 C:\Users\49518922\Downloads\1\Enerfit\obj\Debug\net8.0\Enerfit-Proyecto.sourcelink.json
 C:\Users\49518922\Downloads\1\Enerfit\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\49518922\Downloads\1\Enerfit\obj\Debug\net8.0\staticwebassets.development.json
-C:\Users\49518922\Downloads\1\Enerfit\obj\Debug\net8.0\staticwebassets\msbuild.Enerfit-Proyecto.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\49518922\Downloads\1\Enerfit\obj\Debug\net8.0\staticwebassets\msbuild.build.Enerfit-Proyecto.props
-C:\Users\49518922\Downloads\1\Enerfit\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Enerfit-Proyecto.props
-C:\Users\49518922\Downloads\1\Enerfit\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Enerfit-Proyecto.props
-C:\Users\49518922\Downloads\1\Enerfit\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\49518922\Downloads\1\Enerfit\obj\Debug\net8.0\scopedcss\bundle\Enerfit-Proyecto.styles.css
 C:\Users\49518922\Downloads\1\Enerfit\obj\Debug\net8.0\Enerfit-.648B2AAD.Up2Date
 C:\Users\49518922\Downloads\1\Enerfit\obj\Debug\net8.0\Enerfit-Proyecto.dll
@@ -559,3 +553,10 @@ C:\Users\49518922\Downloads\Enerfit\obj\Debug\net8.0\refint\Enerfit-Proyecto.dll
 C:\Users\49518922\Downloads\Enerfit\obj\Debug\net8.0\Enerfit-Proyecto.pdb
 C:\Users\49518922\Downloads\Enerfit\obj\Debug\net8.0\Enerfit-Proyecto.genruntimeconfig.cache
 C:\Users\49518922\Downloads\Enerfit\obj\Debug\net8.0\ref\Enerfit-Proyecto.dll
+C:\Users\49518922\Downloads\1\Enerfit\bin\Debug\net8.0\Enerfit-Proyecto.staticwebassets.endpoints.json
+C:\Users\49518922\Downloads\1\Enerfit\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\49518922\Downloads\1\Enerfit\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\49518922\Downloads\1\Enerfit\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\49518922\Downloads\1\Enerfit\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\49518922\Downloads\1\Enerfit\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\49518922\Downloads\1\Enerfit\obj\Debug\net8.0\staticwebassets.build.endpoints.json
